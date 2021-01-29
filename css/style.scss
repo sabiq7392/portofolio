@@ -1,0 +1,167 @@
+$myblue:#217AD3;
+$myshadow:0 0.25rem 0.2rem rgba(0,0, 0, 0.25);
+$mymargin: 5em;
+$roboto:'Roboto', sans-serif;
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #e5e5e5;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    box-shadow:$myshadow;
+    background-color: white;
+
+    .navbar-toggler {
+        margin-left:auto!important ;
+    }
+    .navbar-brand {
+        display:unset;
+
+        #logo-sekolah, #logo-sekolah-putih {
+            width: 280px;
+            height: 60px;
+            display: none;
+        }
+    }
+    .collapse {
+        display: flex;
+        justify-content: center;
+        
+        .nav-link {
+            padding: 1em;
+        }
+        .nav-link:hover {
+            transform: scale(1.15);
+            transition: 0.3s;
+        }
+    }
+}
+.hero-image {
+    background-color: $myblue;
+    padding:3em;
+
+    .title {
+        font-family: $roboto;
+        text-shadow:1px 2px 4px rgba(0,0, 0, 0.35);
+        color: white;
+        font-size: 50px;
+    }    
+}
+.selamat-wrapper {
+    background-color: white;
+    
+    .selamat {
+        padding: 1em;
+        font-weight: 600;
+        box-shadow: $myshadow;
+        font-family: $roboto;
+    }
+}
+.box {
+    position: relative;
+    z-index: -1;
+    animation: boxmove 3s ;
+    background-color: white;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    box-shadow: $myshadow;
+    border-top: 0.15em solid $myblue;
+    border-radius: 4px;
+    a {
+        text-decoration: none;
+
+        ul {
+            list-style-type: none;
+            
+            li {
+                margin-left: -2em;
+            }
+        }
+    }
+   
+}
+.box:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
+    cursor: pointer;
+}
+@keyframes boxmove {
+    from {bottom: -100px;}
+    to {bottom: 0px;}
+}
+// -------------------------------------------
+.keunggulan {
+    margin-bottom:$mymargin;
+    height: 700px; 
+    
+    div {
+        .line {
+            width: 500px;
+            height: 1px;
+            background-color: $myblue;
+        }
+    
+       
+    }
+    .box-keunggulan {
+        div p {
+            font-size: 25px;
+            
+        }
+    }
+}
+
+// ------------------- Media Quaries -----------------
+@media screen and (max-width: 991px) {
+    .navbar {
+        background-color: #217AD3;
+        .collapse:not(.show) {
+            display: none!important;
+         
+        }
+        .collapse {
+            display: block;
+
+            .nav-link {
+                padding-left: 0!important;
+                transition: 0.3s;
+            }
+            .nav-link:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+    .box:hover {
+        transform: none;
+    }
+    .hero-image {
+        display: none!important;
+    }
+   .box {
+        margin-bottom: 1em;    
+   }
+   
+}
+@media screen and (max-width: 375px) {
+    .navbar {
+        .navbar-brand {
+            #logo-sekolah-putih {
+                width: 210px!important;
+                height: 50px!important;
+            }
+        }
+    }
+}
+
+
+
+
+// ------------------- Spawn Classs -----------------
+
+.nav-kanan {
+    margin-left: auto!important;
+}

@@ -1,0 +1,182 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+.navbar .navbar-toggler {
+  margin-left: auto !important;
+}
+
+.navbar .navbar-brand {
+  display: unset;
+}
+
+.navbar .navbar-brand #logo-sekolah, .navbar .navbar-brand #logo-sekolah-putih {
+  width: 280px;
+  height: 60px;
+  display: none;
+}
+
+.navbar .collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .collapse .nav-link {
+  padding: 1em;
+}
+
+.navbar .collapse .nav-link:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hero-image {
+  background-color: #217AD3;
+  padding: 3em;
+}
+
+.hero-image .title {
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
+  color: white;
+  font-size: 50px;
+}
+
+.selamat-wrapper {
+  background-color: white;
+}
+
+.selamat-wrapper .selamat {
+  padding: 1em;
+  font-weight: 600;
+  -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+  font-family: "Roboto", sans-serif;
+}
+
+.box {
+  position: relative;
+  z-index: -1;
+  -webkit-animation: boxmove 3s;
+          animation: boxmove 3s;
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+  border-top: 0.15em solid #217AD3;
+  border-radius: 4px;
+}
+
+.box a {
+  text-decoration: none;
+}
+
+.box a ul {
+  list-style-type: none;
+}
+
+.box a ul li {
+  margin-left: -2em;
+}
+
+.box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@-webkit-keyframes boxmove {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+@keyframes boxmove {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+.keunggulan {
+  margin-bottom: 5em;
+  height: 700px;
+}
+
+.keunggulan div .line {
+  width: 500px;
+  height: 1px;
+  background-color: #217AD3;
+}
+
+.keunggulan .box-keunggulan div p {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar {
+    background-color: #217AD3;
+  }
+  .navbar .collapse:not(.show) {
+    display: none !important;
+  }
+  .navbar .collapse {
+    display: block;
+  }
+  .navbar .collapse .nav-link {
+    padding-left: 0 !important;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navbar .collapse .nav-link:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  .box:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .hero-image {
+    display: none !important;
+  }
+  .box {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navbar .navbar-brand #logo-sekolah-putih {
+    width: 210px !important;
+    height: 50px !important;
+  }
+}
+
+.nav-kanan {
+  margin-left: auto !important;
+}
+/*# sourceMappingURL=style.css.map */
