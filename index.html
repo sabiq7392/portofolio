@@ -86,6 +86,7 @@
 
 <div class="container">
   <h1 class="text-center mb-5"><i class="fas fa-users"></i> Bagian Dari Kami</h1>
+  <p class="text-center" id="dot"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></p>
       <div class="row">
 
         <div class="col-md-12 col-lg-4">
@@ -100,7 +101,7 @@
         </div>
 
         <div class="col-md-12 col-lg-4">
-          <div class="box text-center" id="box-id"> 
+          <div class="box text-center" id="box-ids"> 
             <a href="#"> 
               <ul>
                 <li>SMA TERBUKA</li>
@@ -111,7 +112,7 @@
         </div>
 
         <div class="col-md-12 col-lg-4">
-          <div class="box text-center" id="box-id">
+          <div class="box text-center" id="box-idz">
             <a href="#">
             <ul>
               <li>SMART PROJECT</li>
@@ -190,34 +191,38 @@
    }
  }
  
- var x = window.matchMedia("(max-width: 991px)")
- sekrolMobile(x) 
- x.addListener(sekrolMobile)
+ var x = window.matchMedia("(max-width: 991px)");
+ sekrolMobile(x);
+ x.addListener(sekrolMobile);
   
- 
+ //////////////////////////////////////////////////////////////////////////////////////////
+
  function sekrolDesktop(z) {
    window.onscroll = function() {sekrol()};
    if (z.matches) {
      function sekrol() {
        if (document.body.scrollTop > 402 || document.documentElement.scrollTop > 402) {
-         document.getElementById("navbarwhenscroll").classList.add("sticky-top");
-         document.getElementById("navbarwhenscroll").classList.add("navbar-dark");
+         document.getElementById("navbarwhenscroll").classList.add("sticky-top", "navbar-dark");
          document.getElementById("navbarwhenscroll").style.backgroundColor = "#217AD3";
          document.getElementById("navbar-nav-id").style.marginLeft = "auto";
          document.getElementById("navbar-nav-id").style.fontSize = "13px";
          document.getElementById("logo-sekolah-putih").style.display = "unset";
-         document.getElementById("login-id").style.color = "white";
+         document.getElementById("login-id").style.color = "white";       
+       }
+       else if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        document.getElementById("box-id").classList.add("movetoup");
+        document.getElementById("box-ids").classList.add("movetoup");
+        document.getElementById("box-idz").classList.add("movetoup");
+        document.getElementById("dot").style.display = "none";
        }
        else {
-         document.getElementById("navbarwhenscroll").classList.remove("sticky-top");
-         document.getElementById("navbarwhenscroll").classList.remove("navbar-dark");
+         document.getElementById("navbarwhenscroll").classList.remove("sticky-top", "navbar-dark");
          document.getElementById("navbarwhenscroll").style.backgroundColor = "white";
          document.getElementById("logo-sekolah").style.display = "none";
          document.getElementById("navbar-nav-id").style.marginLeft = "unset";
          document.getElementById("navbar-nav-id").style.fontSize = "unset";
          document.getElementById("logo-sekolah-putih").style.display = "none";
          document.getElementById("login-id").style.color = "#217AD3";
-         
        }
      }
    } 
@@ -225,14 +230,26 @@
  
    }
  }
+ var z = window.matchMedia("(min-width: 992px)");
+ sekrolDesktop(z);
+ z.addListener(sekrolDesktop);
  
- var z = window.matchMedia("(min-width: 992px)")
- sekrolDesktop(z)
- z.addListener(sekrolDesktop) 
- 
- 
- 
+////////////////////////////////////////////////////////////////////////////
+
+ function boxmuncul() {
+    document.getElementById("box-id").classList.add("movetoup");
+    document.getElementById("box-ids").classList.add("movetoup");
+    document.getElementById("box-idz").classList.add("movetoup");
+    document.getElementById("dot").style.display = "none";
+ }
    
+
+
+
+
+
+
+
   /*
            window.onscroll = function() {functionscroll()};
  

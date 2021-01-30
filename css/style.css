@@ -71,11 +71,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.box {
+.box, #box-id, #box-ids, #box-idz {
   position: relative;
+  display: none;
   z-index: -1;
-  -webkit-animation: boxmove 3s;
-          animation: boxmove 3s;
   background-color: white;
   padding-top: 2em;
   padding-bottom: 1em;
@@ -85,15 +84,15 @@ body {
   border-radius: 4px;
 }
 
-.box a {
+.box a, #box-id a, #box-ids a, #box-idz a {
   text-decoration: none;
 }
 
-.box a ul {
+.box a ul, #box-id a ul, #box-ids a ul, #box-idz a ul {
   list-style-type: none;
 }
 
-.box a ul li {
+.box a ul li, #box-id a ul li, #box-ids a ul li, #box-idz a ul li {
   margin-left: -2em;
 }
 
@@ -103,6 +102,12 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.movetoup {
+  display: block !important;
+  -webkit-animation: boxmove 2s;
+          animation: boxmove 2s;
 }
 
 @-webkit-keyframes boxmove {
@@ -176,7 +181,7 @@ body {
   }
 }
 
-.nav-kanan {
-  margin-left: auto !important;
+.bg-putih {
+  background-color: white !important;
 }
 /*# sourceMappingURL=style.css.map */

@@ -61,10 +61,10 @@ body {
         font-family: $roboto;
     }
 }
-.box {
+.box, #box-id, #box-ids, #box-idz {
     position: relative;
+    display: none;
     z-index: -1;
-    animation: boxmove 3s ;
     background-color: white;
     padding-top: 2em;
     padding-bottom: 1em;
@@ -89,6 +89,10 @@ body {
     transition: 0.3s;
     cursor: pointer;
 }
+.movetoup {
+    display: block!important;
+    animation: boxmove 2s;
+}
 @keyframes boxmove {
     from {bottom: -100px;}
     to {bottom: 0px;}
@@ -104,8 +108,6 @@ body {
             height: 1px;
             background-color: $myblue;
         }
-    
-       
     }
     .box-keunggulan {
         div p {
@@ -161,7 +163,6 @@ body {
 
 
 // ------------------- Spawn Classs -----------------
-
-.nav-kanan {
-    margin-left: auto!important;
+.bg-putih {
+    background-color: white!important;
 }
