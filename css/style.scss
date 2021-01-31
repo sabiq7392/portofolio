@@ -14,6 +14,7 @@ body {
 .navbar {
     box-shadow:$myshadow;
     background-color: white;
+    z-index: 1;
 
     .navbar-toggler {
         margin-left:auto!important ;
@@ -22,8 +23,7 @@ body {
         display:unset;
 
         #logo-sekolah, #logo-sekolah-putih {
-            width: 280px;
-            height: 60px;
+            width: 263px;
             display: none;
         }
     }
@@ -32,6 +32,7 @@ body {
         justify-content: center;
         
         .nav-link {
+            font-weight: 600;
             padding: 1em;
         }
         .nav-link:hover {
@@ -41,16 +42,46 @@ body {
     }
 }
 .hero-image {
+    display: flex;
+    justify-content: center;
     background-color: $myblue;
-    padding:3em;
 
-    .title {
-        font-family: $roboto;
-        text-shadow:1px 2px 4px rgba(0,0, 0, 0.35);
-        color: white;
-        font-size: 50px;
-    }    
+    .hero-image-content {
+        
+
+        .title {
+            font-family: $roboto;
+            text-shadow:1px 2px 4px rgba(0,0, 0, 0.35);
+            color: white;
+            font-size: 50px;
+        }
+    }
 }
+.hero-image-nopad {
+    background-color: rgba(0, 0, 0, 0.829);
+    
+    .hero-image-content {
+
+        .carousel-caption {
+            opacity: 2;
+    
+            h3 {
+                font-weight: bold;
+            }
+            .line-kecil {
+                height: 2px;
+                width: 50px;
+                background-color:white;
+                margin: auto;
+            }
+        }
+        img {
+            width: 100%;
+            opacity: 0.20;
+        }
+    }
+}
+
 .selamat-wrapper {
     background-color: white;
     
@@ -61,10 +92,10 @@ body {
         font-family: $roboto;
     }
 }
+
 .box, #box-id, #box-ids, #box-idz {
     position: relative;
     display: none;
-    z-index: -1;
     background-color: white;
     padding-top: 2em;
     padding-bottom: 1em;
@@ -87,16 +118,10 @@ body {
 .box:hover {
     transform: scale(1.10);
     transition: 0.3s;
-    cursor: pointer;
+    
 }
-.movetoup {
-    display: block!important;
-    animation: boxmove 2s;
-}
-@keyframes boxmove {
-    from {bottom: -100px;}
-    to {bottom: 0px;}
-}
+
+
 // -------------------------------------------
 .keunggulan {
     margin-bottom:$mymargin;
@@ -116,11 +141,31 @@ body {
         }
     }
 }
+// ------------------- Key Frames -----------------
 
+@keyframes boxmoveup {
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+@keyframes boxmoveright {
+    from {
+        left: -50px;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
 // ------------------- Media Quaries -----------------
 @media screen and (max-width: 991px) {
     .navbar {
-        background-color: #217AD3;
         .collapse:not(.show) {
             display: none!important;
          
@@ -133,21 +178,32 @@ body {
                 transition: 0.3s;
             }
             .nav-link:hover {
-                transform: scale(1.02);
+                transform: none;
             }
         }
     }
-    .box:hover {
-        transform: none;
+    .box {
+        display: block!important;
     }
-    .hero-image {
+    .box:hover {
+        transform: scaleX(1.03);
+    }
+    .movetoup {
+        animation: none!important;
+    }
+    #dot {
+        display: none;
+    }
+    .slide, .carousel {
         display: none!important;
     }
+
    .box {
         margin-bottom: 1em;    
    }
    
 }
+// ------------------------------------------
 @media screen and (max-width: 375px) {
     .navbar {
         .navbar-brand {
@@ -159,10 +215,20 @@ body {
     }
 }
 
+//--------------------------------------------
+@media screen and (max-width: 615px) {
+    .line {
+        width:  100%!important;
+    }
+}
 
 
 
 // ------------------- Spawn Classs -----------------
-.bg-putih {
-    background-color: white!important;
+.movetoup {
+    display: block!important;
+    animation: boxmoveup 2s;
+}
+.myblue {
+    color: #217AD3;
 }

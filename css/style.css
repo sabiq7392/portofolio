@@ -11,6 +11,7 @@ body {
   -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   background-color: white;
+  z-index: 1;
 }
 
 .navbar .navbar-toggler {
@@ -22,8 +23,7 @@ body {
 }
 
 .navbar .navbar-brand #logo-sekolah, .navbar .navbar-brand #logo-sekolah-putih {
-  width: 280px;
-  height: 60px;
+  width: 263px;
   display: none;
 }
 
@@ -37,6 +37,7 @@ body {
 }
 
 .navbar .collapse .nav-link {
+  font-weight: 600;
   padding: 1em;
 }
 
@@ -48,15 +49,44 @@ body {
 }
 
 .hero-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #217AD3;
-  padding: 3em;
 }
 
-.hero-image .title {
+.hero-image .hero-image-content .title {
   font-family: "Roboto", sans-serif;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
   color: white;
   font-size: 50px;
+}
+
+.hero-image-nopad {
+  background-color: rgba(0, 0, 0, 0.829);
+}
+
+.hero-image-nopad .hero-image-content .carousel-caption {
+  opacity: 2;
+}
+
+.hero-image-nopad .hero-image-content .carousel-caption h3 {
+  font-weight: bold;
+}
+
+.hero-image-nopad .hero-image-content .carousel-caption .line-kecil {
+  height: 2px;
+  width: 50px;
+  background-color: white;
+  margin: auto;
+}
+
+.hero-image-nopad .hero-image-content img {
+  width: 100%;
+  opacity: 0.20;
 }
 
 .selamat-wrapper {
@@ -74,7 +104,6 @@ body {
 .box, #box-id, #box-ids, #box-idz {
   position: relative;
   display: none;
-  z-index: -1;
   background-color: white;
   padding-top: 2em;
   padding-bottom: 1em;
@@ -101,31 +130,6 @@ body {
           transform: scale(1.1);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  cursor: pointer;
-}
-
-.movetoup {
-  display: block !important;
-  -webkit-animation: boxmove 2s;
-          animation: boxmove 2s;
-}
-
-@-webkit-keyframes boxmove {
-  from {
-    bottom: -100px;
-  }
-  to {
-    bottom: 0px;
-  }
-}
-
-@keyframes boxmove {
-  from {
-    bottom: -100px;
-  }
-  to {
-    bottom: 0px;
-  }
 }
 
 .keunggulan {
@@ -143,10 +147,51 @@ body {
   font-size: 25px;
 }
 
-@media screen and (max-width: 991px) {
-  .navbar {
-    background-color: #217AD3;
+@-webkit-keyframes boxmoveup {
+  from {
+    bottom: -100px;
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@keyframes boxmoveup {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@-webkit-keyframes boxmoveright {
+  from {
+    left: -50px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes boxmoveright {
+  from {
+    left: -50px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
   .navbar .collapse:not(.show) {
     display: none !important;
   }
@@ -159,14 +204,24 @@ body {
     transition: 0.3s;
   }
   .navbar .collapse .nav-link:hover {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-  .box:hover {
     -webkit-transform: none;
             transform: none;
   }
-  .hero-image {
+  .box {
+    display: block !important;
+  }
+  .box:hover {
+    -webkit-transform: scaleX(1.03);
+            transform: scaleX(1.03);
+  }
+  .movetoup {
+    -webkit-animation: none !important;
+            animation: none !important;
+  }
+  #dot {
+    display: none;
+  }
+  .slide, .carousel {
     display: none !important;
   }
   .box {
@@ -181,7 +236,19 @@ body {
   }
 }
 
-.bg-putih {
-  background-color: white !important;
+@media screen and (max-width: 615px) {
+  .line {
+    width: 100% !important;
+  }
+}
+
+.movetoup {
+  display: block !important;
+  -webkit-animation: boxmoveup 2s;
+          animation: boxmoveup 2s;
+}
+
+.myblue {
+  color: #217AD3;
 }
 /*# sourceMappingURL=style.css.map */

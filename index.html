@@ -71,6 +71,52 @@
       </div>
     </nav>
 <!----------------------------------------------- HERO-IMAGE -------------------------------------------------------------->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="hero-image">
+        <div class="hero-image-content" style="width: 100%; height: 80vh;">
+          <img src="img/herooo.png" alt="Banner SMAN 1 TAJURHALANG" width="700px"  >
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-image-nopad">
+        <div class="hero-image-content text-center" style="width: 100%; height: 80vh;">
+          <img src="img/pexels-fauxels-3184317.jpg" alt="Logo SMAN 1 TAJURHALANG" >
+          <div class="carousel-caption d-none d-md-block">
+            <h3 >Pengajar yang bersertifikat</h3>
+            <div class="line-kecil"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="hero-image-nopad">
+        <div class="hero-image-content text-center" style="width: 100%; height: 80vh;">
+          <img src="img/pexels-julia-m-cameron-4144923.jpg" alt="Logo SMAN 1 TAJURHALANG" >
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Laboratorium Komputer</h3>
+            <div class="line-kecil"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+
+<div class="selamat-wrapper mb-5">
+  <p class="text-center selamat myshadow">SELAMAT DATANG DI SMAN 1 TAJURHALANG</p>
+</div>
+<!----
     <div class="container-fluid hero-image">
       <div class="hero-image-content text-center">
         <img src="img/icon.png" alt="Logo SMAN 1 TAJURHALANG" width="157px" height="158px">
@@ -81,10 +127,10 @@
     <div class="selamat-wrapper mb-5">
       <p class="text-center selamat myshadow">SELAMAT DATANG DI WEBSITE RESMI SMAN 1 TAJURHALANG</p>
     </div>
-
+  --->
 <!----------------------------------------------Bagian dari Kami----------------------------------------------------------->
 
-<div class="container">
+<div class="container" onmouseover="boxmuncul()">
   <h1 class="text-center mb-5"><i class="fas fa-users"></i> Bagian Dari Kami</h1>
   <p class="text-center" id="dot"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></p>
       <div class="row">
@@ -93,8 +139,8 @@
           <div class="box text-center" id="box-id">
             <a href="#">
               <ul>
-                <li>OSIS</li>
-                <li>Organisasi Mahasiswa</li>
+                <li><b>OSIS</b></li>
+                <li style="color: rgba(0,0,0, 0.50);">Organisasi Mahasiswa</li>
               </ul>
             </a>
           </div>
@@ -104,8 +150,8 @@
           <div class="box text-center" id="box-ids"> 
             <a href="#"> 
               <ul>
-                <li>SMA TERBUKA</li>
-                <li>SMA TERBUKA 1 TAJURHALANG</li>
+                <li><b>SMA TERBUKA</b></li>
+                <li style="color: rgba(0,0,0, 0.50);">SMA TERBUKA 1 TAJURHALANG</li>
               </ul>
             </a>
           </div>
@@ -115,8 +161,8 @@
           <div class="box text-center" id="box-idz">
             <a href="#">
             <ul>
-              <li>SMART PROJECT</li>
-              <li>SMART Project for Student</li>
+              <li><b>SMART PROJECT</b></li>
+              <li style="color: rgba(0,0,0, 0.50);">SMART Project for Student</li>
             </ul>
             </a>
           </div>
@@ -175,19 +221,19 @@
 
 <!-------------------------------------------------JavaScript-------------------------------------------------------------->
 <script>
-  
- function sekrolMobile(x) {
+
+function sekrolMobile(x) {
    if (x.matches) { 
-     document.getElementById("navbarwhenscroll").classList.add("sticky-top");
-     document.getElementById("navbarwhenscroll").classList.add("navbar-dark");
+     document.getElementById("navbarwhenscroll").classList.add("sticky-top", "navbar-dark");
+     document.getElementById("navbarwhenscroll").style.backgroundColor = "#217AD3";
      document.getElementById("logo-sekolah-putih").style.display = "unset";
-     document.getElementById("login-id").style.color = "white";
+     document.getElementById("login-id").style.color = "#f1c40f";
    } 
    else {
-     document.getElementById("navbarwhenscroll").classList.remove("sticky-top");
-     document.getElementById("navbarwhenscroll").classList.remove("navbar-dark");
+     document.getElementById("navbarwhenscroll").classList.remove("sticky-top", "navbar-dark");
      document.getElementById("logo-sekolah-putih").style.display = "none";
      document.getElementById("login-id").style.color = "#217AD3";
+     document.getElementById("navbarwhenscroll").style.backgroundColor = "white";
    }
  }
  
@@ -197,61 +243,59 @@
   
  //////////////////////////////////////////////////////////////////////////////////////////
 
- function sekrolDesktop(z) {
-   window.onscroll = function() {sekrol()};
-   if (z.matches) {
-     function sekrol() {
-       if (document.body.scrollTop > 402 || document.documentElement.scrollTop > 402) {
-         document.getElementById("navbarwhenscroll").classList.add("sticky-top", "navbar-dark");
-         document.getElementById("navbarwhenscroll").style.backgroundColor = "#217AD3";
-         document.getElementById("navbar-nav-id").style.marginLeft = "auto";
-         document.getElementById("navbar-nav-id").style.fontSize = "13px";
-         document.getElementById("logo-sekolah-putih").style.display = "unset";
-         document.getElementById("login-id").style.color = "white";       
-       }
-       else if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-        document.getElementById("box-id").classList.add("movetoup");
-        document.getElementById("box-ids").classList.add("movetoup");
-        document.getElementById("box-idz").classList.add("movetoup");
-        document.getElementById("dot").style.display = "none";
-       }
-       else {
-         document.getElementById("navbarwhenscroll").classList.remove("sticky-top", "navbar-dark");
-         document.getElementById("navbarwhenscroll").style.backgroundColor = "white";
-         document.getElementById("logo-sekolah").style.display = "none";
-         document.getElementById("navbar-nav-id").style.marginLeft = "unset";
-         document.getElementById("navbar-nav-id").style.fontSize = "unset";
-         document.getElementById("logo-sekolah-putih").style.display = "none";
-         document.getElementById("login-id").style.color = "#217AD3";
-       }
-     }
-   } 
-   else {
- 
-   }
- }
+function sekrolDesktop(z) {
+    window.onscroll = function() {sekrol()};
+    if (z.matches) {
+      function sekrol() {
+        if (document.body.scrollTop > 530 || document.documentElement.scrollTop > 530) {
+          document.getElementById("navbarwhenscroll").classList.add("sticky-top", "navbar-dark");
+          document.getElementById("navbarwhenscroll").style.backgroundColor = "#217AD3";
+          document.getElementById("navbar-nav-id").style.marginLeft = "auto";
+          document.getElementById("navbar-nav-id").style.fontSize = "14px";
+          document.getElementById("logo-sekolah-putih").style.display = "unset";
+          document.getElementById("login-id").style.color = "#f1c40f";       
+        }
+        else if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          document.getElementById("box-id").classList.add("movetoup");
+          document.getElementById("box-ids").classList.add("movetoup");
+          document.getElementById("box-idz").classList.add("movetoup");
+          document.getElementById("dot").style.display = "none";
+        }
+        else {
+          document.getElementById("navbarwhenscroll").classList.remove("sticky-top", "navbar-dark");
+          document.getElementById("navbarwhenscroll").style.backgroundColor = "white";
+          document.getElementById("logo-sekolah").style.display = "none";
+          document.getElementById("navbar-nav-id").style.marginLeft = "unset";
+          document.getElementById("navbar-nav-id").style.fontSize = "unset";
+          document.getElementById("logo-sekolah-putih").style.display = "none";
+          document.getElementById("login-id").style.color = "#217AD3";
+        }
+      }
+    } 
+    else {}
+}
  var z = window.matchMedia("(min-width: 992px)");
  sekrolDesktop(z);
  z.addListener(sekrolDesktop);
  
 ////////////////////////////////////////////////////////////////////////////
-
- function boxmuncul() {
-    document.getElementById("box-id").classList.add("movetoup");
-    document.getElementById("box-ids").classList.add("movetoup");
-    document.getElementById("box-idz").classList.add("movetoup");
-    document.getElementById("dot").style.display = "none";
- }
-   
-
-
+ 
+      
+function boxmuncul() {
+  document.getElementById("box-id").classList.add("movetoup");
+  document.getElementById("box-ids").classList.add("movetoup");
+  document.getElementById("box-idz").classList.add("movetoup");
+  document.getElementById("dot").style.display = "none";
+}
 
 
 
 
 
-  /*
-           window.onscroll = function() {functionscroll()};
+
+
+/*
+      window.onscroll = function() {functionscroll()};
  
            function functionscroll() {
                if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
