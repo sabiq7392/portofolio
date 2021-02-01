@@ -18,6 +18,7 @@ body {
     box-shadow:$myshadow;
     background-color: white;
     z-index: 1;
+    animation: loading 1s;
 
     .navbar-toggler {
         margin-left:auto!important ;
@@ -44,6 +45,8 @@ body {
         }
     }
 }
+
+
 .shownav {
     animation: loadingstickynav 1s;
 }
@@ -178,6 +181,22 @@ body {
         
     }
 }
+.totop-wrapper {
+    position: fixed;
+    z-index: 15;
+    bottom: 5%;
+    right: 3%;
+    background-color: #55efc4;
+    border-radius: 10px;
+
+    .totop {
+        display: block;
+        color: white;
+        padding: 0.5em 1em;
+        text-decoration: none;
+    }
+    
+}
 // ------------------- Key Frames -----------------
 @keyframes loading {
     0% {
@@ -187,22 +206,7 @@ body {
         transform: translateY(0);
     }
 }
-@keyframes loadingstickynav {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-@keyframes removestickynav {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
-}
+
 @keyframes boxmoveup {
     from {
         bottom: -100px;

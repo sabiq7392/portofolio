@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!--------CSS-------->
     <link rel="stylesheet" href="css/style.css">
+    <script src="javascript.js"></script>
 
     <title>SMAN 1 TAJURHALANG</title>
   </head>
@@ -70,6 +71,9 @@
         </div>
       </div>
     </nav>
+    
+      
+    
 <!----------------------------------------------- HERO-IMAGE -------------------------------------------------------------->
 <article>
   <section>
@@ -171,7 +175,9 @@
             </div>
           </div>
     </div>
-        
+    <div class="totop-wrapper">
+      <a href="#" onclick="scrolltoTop()" class="totop"><i class="fas fa-arrow-up"></i></a>
+    </div>
     <!---------------------------------------------- Keunggulan Kami -----------------------------------------------------------> 
     
     <div class="container-fluid bg-white keunggulan text-center mt-5">
@@ -186,13 +192,14 @@
           <div>
             <h2 class="">Akses Internet Gratis</h2>
             <img src="/img/wifi.png" alt="" class="mb-3">
+            <p>Di semua area sekolah ini terjangkau WIFI gratis bagi seluruh siswa, guru, dan karyawan dengan kecepatan 100Mbps</p>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
           <div>
             <h2 class="">Terakreditasi A</h2>
             <img src="/img/best.png" alt="" class="mb-3">
-            <p>Sekolah kami telah terakreditasi A memiliki kualitas baik serta fasilitas yang baik guna menunjang  pembelajaran bagi para siswa disini</p>
+            <p>Sekolah kami telah terakreditasi A memiliki kualitas dan fasilitas yang baik guna menunjang  pembelajaran bagi para siswa disini</p>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
@@ -325,7 +332,9 @@ function boxmuncul() {
     document.getElementById("dot").style.display = "none";
 }
 
-
+function scrolltoTop() {
+  window.scrollTo(0, 0)
+}
 
 
 

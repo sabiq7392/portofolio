@@ -12,6 +12,8 @@ body {
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   background-color: white;
   z-index: 1;
+  -webkit-animation: loading 1s;
+          animation: loading 1s;
 }
 
 .navbar .navbar-toggler {
@@ -195,6 +197,22 @@ body {
   font-size: 18px;
 }
 
+.totop-wrapper {
+  position: fixed;
+  z-index: 15;
+  bottom: 5%;
+  right: 3%;
+  background-color: #55efc4;
+  border-radius: 10px;
+}
+
+.totop-wrapper .totop {
+  display: block;
+  color: white;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+
 @-webkit-keyframes loading {
   0% {
     -webkit-transform: translateY(-100%);
@@ -214,50 +232,6 @@ body {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes loadingstickynav {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes loadingstickynav {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes removestickynav {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
-@keyframes removestickynav {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
   }
 }
 
