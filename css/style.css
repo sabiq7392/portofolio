@@ -39,13 +39,23 @@ body {
 .navbar .collapse .nav-link {
   font-weight: 600;
   padding: 1em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .navbar .collapse .nav-link:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+}
+
+.shownav {
+  -webkit-animation: loadingstickynav 1s;
+          animation: loadingstickynav 1s;
+}
+
+.removenav {
+  -webkit-animation: removestickynav 1s;
+          animation: removestickynav 1s;
 }
 
 .hero-image {
@@ -56,37 +66,55 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #217AD3;
+  height: 81vh;
+  width: 100%;
 }
 
-.hero-image .hero-image-content .title {
-  font-family: "Roboto", sans-serif;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
-  color: white;
-  font-size: 50px;
+.hero-image .hero-image-content img {
+  width: 600px;
 }
 
 .hero-image-nopad {
   background-color: rgba(0, 0, 0, 0.829);
 }
 
-.hero-image-nopad .hero-image-content .carousel-caption {
-  opacity: 2;
+.hero-image-nopad .slide1 {
+  background-image: url("/img/pexels-fauxels-3184317.jpg");
 }
 
-.hero-image-nopad .hero-image-content .carousel-caption h3 {
-  font-weight: bold;
+.hero-image-nopad .slide2 {
+  background-image: url("/img/pexels-tranmautritam-326501.jpg");
 }
 
-.hero-image-nopad .hero-image-content .carousel-caption .line-kecil {
+.hero-image-nopad .hero-image-content {
+  -o-object-position: center;
+     object-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+}
+
+.hero-image-nopad .hero-image-content .mycarousel-caption {
+  position: absolute;
+  z-index: 10;
+  padding: 1em 2em;
+  color: #217AD3;
+  text-align: center;
+  border: 2px solid #217AD3;
+}
+
+.hero-image-nopad .hero-image-content .mycarousel-caption .line-kecil {
   height: 2px;
   width: 50px;
   background-color: white;
   margin: auto;
-}
-
-.hero-image-nopad .hero-image-content img {
-  width: 100%;
-  opacity: 0.20;
 }
 
 .selamat-wrapper {
@@ -111,6 +139,8 @@ body {
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   border-top: 0.15em solid #217AD3;
   border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .box a, #box-id a, #box-ids a, #box-idz a {
@@ -134,7 +164,13 @@ body {
 
 .keunggulan {
   margin-bottom: 5em;
-  height: 700px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.keunggulan div p {
+  font-size: 14px;
 }
 
 .keunggulan div .line {
@@ -143,8 +179,86 @@ body {
   background-color: #217AD3;
 }
 
+.keunggulan .box-keunggulan {
+  margin-bottom: 5em;
+}
+
+.keunggulan .box-keunggulan div h2 {
+  padding: 0.5em;
+}
+
+.keunggulan .box-keunggulan div img {
+  width: 190px;
+}
+
 .keunggulan .box-keunggulan div p {
-  font-size: 25px;
+  font-size: 18px;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes loadingstickynav {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes loadingstickynav {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes removestickynav {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+@keyframes removestickynav {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
 }
 
 @-webkit-keyframes boxmoveup {
@@ -240,6 +354,24 @@ body {
   .line {
     width: 100% !important;
   }
+  .linelarge {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .navbar .navbar-brand #logo-sekolah-putih {
+    width: 400px;
+  }
+  .nav-link {
+    font-size: 22px !important;
+  }
+  .hero-image .hero-image-content img {
+    width: 900px !important;
+  }
+  .selamat {
+    padding: 1.5em !important;
+  }
 }
 
 .movetoup {
@@ -250,5 +382,12 @@ body {
 
 .myblue {
   color: #217AD3;
+}
+
+.linelarge {
+  width: 800px;
+  height: 1px;
+  margin: auto;
+  background-color: #217AD3;
 }
 /*# sourceMappingURL=style.css.map */

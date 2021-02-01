@@ -2,6 +2,10 @@ $myblue:#217AD3;
 $myshadow:0 0.25rem 0.2rem rgba(0,0, 0, 0.25);
 $mymargin: 5em;
 $roboto:'Roboto', sans-serif;
+$fontkecil: 14px;
+
+$fontbesar:32px;
+
 
 html {
     scroll-behavior: smooth;
@@ -10,7 +14,6 @@ body {
     background-color: #e5e5e5;
     font-family: 'Raleway', sans-serif;
 }
-
 .navbar {
     box-shadow:$myshadow;
     background-color: white;
@@ -34,40 +37,60 @@ body {
         .nav-link {
             font-weight: 600;
             padding: 1em;
+            transition: 0.3s;
         }
         .nav-link:hover {
             transform: scale(1.15);
-            transition: 0.3s;
         }
     }
 }
+.shownav {
+    animation: loadingstickynav 1s;
+}
+.removenav {
+    animation: removestickynav 1s;
+}
+
 .hero-image {
     display: flex;
     justify-content: center;
     background-color: $myblue;
-
+    height: 81vh;
+    width: 100%;
+    
     .hero-image-content {
         
-
-        .title {
-            font-family: $roboto;
-            text-shadow:1px 2px 4px rgba(0,0, 0, 0.35);
-            color: white;
-            font-size: 50px;
+        img {
+            width: 600px;
         }
+
     }
 }
 .hero-image-nopad {
     background-color: rgba(0, 0, 0, 0.829);
-    
+   
+    .slide1 {
+        background-image: url("/img/pexels-fauxels-3184317.jpg");
+        
+    }
+    .slide2 {
+        background-image: url("/img/pexels-tranmautritam-326501.jpg"); 
+    }
     .hero-image-content {
+        object-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        
+        .mycarousel-caption {
+            position: absolute;
+            z-index: 10;
+            padding: 1em 2em;
+            color:$myblue;
+            text-align: center;
+            border: 2px solid $myblue;
 
-        .carousel-caption {
-            opacity: 2;
-    
-            h3 {
-                font-weight: bold;
-            }
             .line-kecil {
                 height: 2px;
                 width: 50px;
@@ -75,12 +98,10 @@ body {
                 margin: auto;
             }
         }
-        img {
-            width: 100%;
-            opacity: 0.20;
-        }
+
     }
 }
+
 
 .selamat-wrapper {
     background-color: white;
@@ -102,6 +123,7 @@ body {
     box-shadow: $myshadow;
     border-top: 0.15em solid $myblue;
     border-radius: 4px;
+    transition: 0.3s;
     a {
         text-decoration: none;
 
@@ -125,9 +147,12 @@ body {
 // -------------------------------------------
 .keunggulan {
     margin-bottom:$mymargin;
-    height: 700px; 
+    height: fit-content; 
     
     div {
+        p {
+            font-size: 14px;
+        }
         .line {
             width: 500px;
             height: 1px;
@@ -135,14 +160,49 @@ body {
         }
     }
     .box-keunggulan {
-        div p {
-            font-size: 25px;
-            
+        margin-bottom:$mymargin;
+        div {
+            h2 {
+               
+                padding: 0.5em;
+            }
+            img {
+               
+                width: 190px;
+
+            }
+            p {
+                font-size: 18px;
+            }
         }
+        
     }
 }
 // ------------------- Key Frames -----------------
-
+@keyframes loading {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes loadingstickynav {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes removestickynav {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
 @keyframes boxmoveup {
     from {
         bottom: -100px;
@@ -220,8 +280,38 @@ body {
     .line {
         width:  100%!important;
     }
+    .linelarge {
+        width: 100%!important ;
+    }
 }
+//----------------------------------------------
 
+@media screen and (min-width: 1920px) {
+    .navbar {
+        .navbar-brand {
+            #logo-sekolah-putih {
+                width:400px;
+            }
+        }
+    }
+    .nav-link {
+        font-size: 22px!important;
+    }
+    .hero-image {
+
+        .hero-image-content {
+            
+            img {
+                width: 900px!important;
+            }
+            
+        }
+    }
+
+    .selamat {
+        padding:1.5em!important;
+    }
+}
 
 
 // ------------------- Spawn Classs -----------------
@@ -232,3 +322,11 @@ body {
 .myblue {
     color: #217AD3;
 }
+.linelarge {
+    width: 800px;
+    height: 1px;
+    margin: auto;
+    background-color: $myblue;
+}
+//---------------------------------------------------
+
