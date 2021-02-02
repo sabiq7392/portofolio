@@ -100,7 +100,7 @@
           <div class="hero-image-nopad">
             <div class="hero-image-content text-center slide2" style="width: 100%; height: 81vh;">
               
-              <div class="mycarousel-caption d-md-block" style="color: white;border: 2px solid white;"> 
+              <div class="mycarousel-caption d-md-block" > 
                 <h3>Laboratorium Komputer</h3>
               </div>
             </div>
@@ -128,36 +128,36 @@
           <div class="row margin-row">
     
             <div class="col-md-12 col-lg-4">
-              <div class="box text-center" id="box-id">
-                <a href="#">
-                  <ul>
-                    <li><b>OSIS</b></li>
-                    <li style="color: rgba(0,0,0, 0.50);">Organisasi Mahasiswa</li>
-                  </ul>
-                </a>
-              </div>
+              <a href="#">
+                <div class="box text-center" id="box-id">
+                    <ul>
+                      <li>OSIS</li>
+                      <li style="color: rgba(0,0,0, 0.50);">Organisasi Mahasiswa</li>
+                    </ul>
+                </div>
+              </a>
             </div>
     
             <div class="col-md-12 col-lg-4">
+              <a href="#"> 
               <div class="box text-center" id="box-ids"> 
-                <a href="#"> 
                   <ul>
-                    <li><b>SMA TERBUKA</b></li>
+                    <li>SMA TERBUKA</li>
                     <li style="color: rgba(0,0,0, 0.50);">SMA TERBUKA 1 TAJURHALANG</li>
                   </ul>
-                </a>
               </div>
+            </a>
             </div>
     
             <div class="col-md-12 col-lg-4">
-              <div class="box text-center" id="box-idz">
-                <a href="#">
-                <ul>
-                  <li><b>SMART PROJECT</b></li>
-                  <li style="color: rgba(0,0,0, 0.50);">SMART Project for Student</li>
-                </ul>
-                </a>
-              </div>
+              <a href="#">
+                <div class="box text-center" id="box-idz">
+                  <ul>
+                    <li>SMART PROJECT</li>
+                    <li style="color: rgba(0,0,0, 0.50);">SMART Project for Student</li>
+                  </ul>
+                </div>
+              </a>
             </div>
           </div>
     </div>
@@ -176,38 +176,29 @@
     
       <div class="row">
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-id" onmouseover="textmoveup0()" onmouseout="textgone0()">
+          <div class="wrapper h-100" id="cardmove-id">
             <div class="konten" id="konten-id">
               <h2 class="">Akses Internet Gratis</h2>
               <img src="/img/wifi.png" alt="" class="mb-3">
               <p>Di semua area sekolah ini terjangkau WIFI gratis bagi seluruh siswa, guru, dan karyawan dengan kecepatan 100Mbps</p>
             </div>
-            <div class="newkonten" id="newkonten">
-              <a href="#">Learn More</a>
-            </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-ids" onmouseover="textmoveup1()" onmouseout="textgone1()">
+          <div class="wrapper h-100" id="cardmove-ids">
             <div class="konten" id="konten-ids">
               <h2 class="">Terakreditasi A</h2>
               <img src="/img/best.png" alt="" class="mb-3">
               <p>Sekolah kami telah terakreditasi A memiliki kualitas dan fasilitas yang baik guna menunjang  pembelajaran bagi para siswa disini</p>
             </div>
-            <div class="newkonten" id="newkonten">
-              <a href="#">Learn More</a>
-            </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-idz" onmouseover="textmoveup2()" onmouseout="textgone2()">
+          <div class="wrapper h-100" id="cardmove-idz">
             <div class="konten" id="konten-idz">
               <h2>Fasilitas Laboratorium</h2>
               <img src="/img/test.png" alt="" class="mb-3">
               <p>Terdapat Labolatorium biologi, kimia dan komputer untuk memfasilitasi guru dan siswa praktik</p>
-            </div>
-            <div class="newkonten" id="newkonten">
-              <a href="#">Learn More</a>
             </div>
             </div>
         </div>
@@ -263,6 +254,7 @@ function sekrolDesktop(z) {
           cardeelem0.classList.add("movetoup");
           cardeelem1.classList.add("movetoup");
           cardeelem2.classList.add("movetoup");
+          document.getElementById("dot1").style.display = "none";
         }
         else if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
           mynavbar.classList.add("sticky-top", "navbar-dark");
@@ -270,7 +262,7 @@ function sekrolDesktop(z) {
           mynavbarnav.style.marginLeft = "auto";
           mynavbarnav.style.fontSize = "14px";
           document.getElementById("logo-sekolah-putih").style.display = "unset";
-          document.getElementById("login-id").style.color = "#f1c40f";    
+          document.getElementById("login-id").style.color = "#55efc4";    
         }
         else if (document.body.scrollTop < 500 || document.documentElement.scrollTop < 500) {
           mynavbar.classList.remove("sticky-top", "navbar-dark");
@@ -389,14 +381,6 @@ function textgone2(x) {
 
 
 // --------------------------> Variabel
-var elem0 = document.getElementsByClassName("konten")[0];
-var elem1 = document.getElementsByClassName("konten")[1];
-var elem2 = document.getElementsByClassName("konten")[2];
-//--
-var newelem0 = document.getElementsByClassName("newkonten")[0];
-var newelem1 = document.getElementsByClassName("newkonten")[1];
-var newelem2 = document.getElementsByClassName("newkonten")[2];
-//--
 var cardeelem0 = document.getElementsByClassName("wrapper")[0];
 var cardeelem1 = document.getElementsByClassName("wrapper")[1];
 var cardeelem2 = document.getElementsByClassName("wrapper")[2];

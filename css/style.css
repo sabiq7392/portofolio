@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: #f5f5f5;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -97,17 +97,14 @@ body {
 
 .hero-image-nopad .hero-image-content .mycarousel-caption {
   z-index: 10;
-  padding: 1em 2em;
-  color: #217AD3;
+  color: white;
   text-align: center;
-  border: 2px solid #217AD3;
+  border: solid 2px white;
+  padding: 1em 2em;
 }
 
-.hero-image-nopad .hero-image-content .mycarousel-caption .line-kecil {
-  height: 2px;
-  width: 50px;
-  background-color: white;
-  margin: auto;
+.hero-image-nopad .hero-image-content .mycarousel-caption h3 {
+  margin: 0;
 }
 
 .selamat-wrapper {
@@ -122,7 +119,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.box, #box-id, #box-ids, #box-idz {
+a {
+  text-decoration: none;
+}
+
+a .box {
   position: relative;
   display: none;
   background-color: white;
@@ -130,7 +131,7 @@ body {
   padding-bottom: 1em;
   -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
-  border-top: 0.15em solid #217AD3;
+  border-top: 2px solid #217AD3;
   border-radius: 4px;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -138,15 +139,12 @@ body {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.box a, #box-id a, #box-ids a, #box-idz a {
-  text-decoration: none;
-}
-
-.box a ul, #box-id a ul, #box-ids a ul, #box-idz a ul {
+a .box ul {
   list-style-type: none;
 }
 
-.box a ul li, #box-id a ul li, #box-ids a ul li, #box-idz a ul li {
+a .box ul li {
+  font-family: "Roboto", sans-serif;
   margin-left: -2em;
 }
 
@@ -183,12 +181,10 @@ body {
   transition: -webkit-animation 5s;
   transition: animation 5s;
   transition: animation 5s, -webkit-animation 5s;
-  -webkit-transition: background-image 1s;
-  transition: background-image 1s;
   border-radius: 5px;
   padding: 1em;
-  -webkit-box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
 }
 
 .keunggulan .box-keunggulan .wrapper .konten {
@@ -206,10 +202,6 @@ body {
 .keunggulan .box-keunggulan .wrapper .konten p {
   margin: 0 10px;
   font-size: 18px;
-}
-
-.keunggulan .box-keunggulan .wrapper #newkonten {
-  display: none;
 }
 
 .totop-wrapper {
