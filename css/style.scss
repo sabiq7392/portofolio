@@ -3,9 +3,7 @@ $myshadow:0 0.25rem 0.2rem rgba(0,0, 0, 0.25);
 $mymargin: 5em;
 $roboto:'Roboto', sans-serif;
 $fontkecil: 14px;
-
 $fontbesar:32px;
-
 
 html {
     scroll-behavior: smooth;
@@ -119,7 +117,7 @@ a {
         padding-top: 2em;
         padding-bottom: 1em;
         box-shadow: $myshadow;
-        border-top: 11px solid $myblue;
+        border-left: 40px solid $myblue;
         transition: transform 0.2s;
     
             ul {
@@ -271,7 +269,7 @@ a {
    .box-keunggulan {
         .wrapper {
             height: fit-content!important;
-            box-shadow:none!important;
+            box-shadow: none!important;
             display: block!important;
 
             p {
