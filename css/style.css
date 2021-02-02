@@ -89,22 +89,13 @@ body {
 }
 
 .hero-image-nopad .hero-image-content {
-  -o-object-position: center;
-     object-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   background-size: cover;
 }
 
 .hero-image-nopad .hero-image-content .mycarousel-caption {
-  position: absolute;
   z-index: 10;
   padding: 1em 2em;
   color: #217AD3;
@@ -185,15 +176,23 @@ body {
   margin-bottom: 5em;
 }
 
-.keunggulan .box-keunggulan div h2 {
+.keunggulan .box-keunggulan .wrapper {
+  height: 470px;
+  -webkit-box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+.keunggulan .box-keunggulan .wrapper .konten h2 {
+  height: 100px;
   padding: 0.5em;
 }
 
-.keunggulan .box-keunggulan div img {
+.keunggulan .box-keunggulan .wrapper .konten img {
   width: 190px;
 }
 
-.keunggulan .box-keunggulan div p {
+.keunggulan .box-keunggulan .wrapper .konten p {
+  margin: 0 10px;
   font-size: 18px;
 }
 
@@ -330,6 +329,19 @@ body {
   }
   .linelarge {
     width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .box-keunggulan .wrapper {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  .box-keunggulan .wrapper p {
+    padding: 1em;
   }
 }
 

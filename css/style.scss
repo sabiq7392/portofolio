@@ -80,14 +80,11 @@ body {
         background-image: url("/img/pexels-tranmautritam-326501.jpg"); 
     }
     .hero-image-content {
-        object-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display:grid;
+        place-items: center;
         background-size: cover;
         
         .mycarousel-caption {
-            position: absolute;
             z-index: 10;
             padding: 1em 2em;
             color:$myblue;
@@ -164,21 +161,24 @@ body {
     }
     .box-keunggulan {
         margin-bottom:$mymargin;
-        div {
-            h2 {
-               
-                padding: 0.5em;
-            }
-            img {
-               
-                width: 190px;
-
-            }
-            p {
-                font-size: 18px;
+        .wrapper {
+            height: 470px;
+            box-shadow:3px 4px 15px 1px rgba(0,0, 0, 0.25);
+            .konten {
+                
+                h2 {
+                    height: 100px;
+                    padding: 0.5em;
+                }
+                img {
+                    width: 190px;
+                }
+                p {
+                    margin:0 10px;
+                    font-size: 18px;
+                }
             }
         }
-        
     }
 }
 .totop-wrapper {
@@ -286,6 +286,21 @@ body {
     }
     .linelarge {
         width: 100%!important ;
+    }
+
+
+}
+//----------------------------------------------
+@media screen and (max-width: 991px) {
+    .box-keunggulan {
+        .wrapper {
+            height: fit-content!important;
+            box-shadow:none!important;
+
+            p {
+                padding: 1em;
+            }
+        }    
     }
 }
 //----------------------------------------------
