@@ -162,13 +162,12 @@ body {
     .box-keunggulan {
         margin-bottom:$mymargin;
         .wrapper {
-            height: 470px;
+            padding: 1em;
             box-shadow:3px 4px 15px 1px rgba(0,0, 0, 0.25);
             .konten {
-                
                 h2 {
-                    height: 100px;
-                    padding: 0.5em;
+                    
+                    height: 73px;
                 }
                 img {
                     width: 190px;
