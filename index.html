@@ -92,7 +92,6 @@
             <div class="hero-image-content text-center slide1" style="width: 100%; height: 81vh;">
               <div class="mycarousel-caption d-md-block ">
                 <h3 >Pengajar yang bersertifikat</h3>
-               <!-- <div class="line-kecil"></div> -->
               </div>
             </div>
           </div>
@@ -103,7 +102,6 @@
               
               <div class="mycarousel-caption d-md-block" style="color: white;border: 2px solid white;"> 
                 <h3>Laboratorium Komputer</h3>
-               <!--<div class="line-kecil"></div>-->
               </div>
             </div>
           </div>
@@ -122,23 +120,11 @@
     <div class="selamat-wrapper mb-5">
       <p class="text-center selamat myshadow">SELAMAT DATANG DI SMAN 1 TAJURHALANG</p>
     </div>
-    <!----
-        <div class="container-fluid hero-image">
-          <div class="hero-image-content text-center">
-            <img src="img/icon.png" alt="Logo SMAN 1 TAJURHALANG" width="157px" height="158px">
-            <p class="title">SMAN 1 TAJURHALANG <br> KABUPATEN BOGOR</p>
-          </div>
-        </div>
-        
-        <div class="selamat-wrapper mb-5">
-          <p class="text-center selamat myshadow">SELAMAT DATANG DI WEBSITE RESMI SMAN 1 TAJURHALANG</p>
-        </div>
-      --->
     <!----------------------------------------------Bagian dari Kami----------------------------------------------------------->
     
     <div class="container" onmouseover="boxmuncul()">
       <h1 class="text-center mb-5"><i class="fas fa-users"></i> Bagian Dari Kami</h1>
-      <p class="text-center" id="dot"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></p>
+      <p class="text-center" id="dot"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></p>
           <div class="row margin-row">
     
             <div class="col-md-12 col-lg-4">
@@ -180,45 +166,52 @@
     </div>
     <!---------------------------------------------- Keunggulan Kami -----------------------------------------------------------> 
     
-    <div class="container-fluid bg-white keunggulan text-center mt-5">
+    <div class="container-fluid bg-white keunggulan text-center mt-5" onmouseover="boxmuncul1()">
       <div class="p-5">
         <h1 class="">Keunggulan Kami</h1>
         <p>Sekolah Kami selalu melakukan perbaikan pembelajaran, lingkungan yang asri, nyaman dan ramah</p>
-        <div class="line m-auto"></div>
+        <div class="line m-auto mb-5"></div>
+        <p class="text-center" id="dot1"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></p>
       </div>  
     
       <div class="row">
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100">
-            <div class="konten">
+          <div class="wrapper h-100" id="cardmove-id" onmouseover="textmoveup0()" onmouseout="textgone0()">
+            <div class="konten" id="konten-id">
               <h2 class="">Akses Internet Gratis</h2>
               <img src="/img/wifi.png" alt="" class="mb-3">
               <p>Di semua area sekolah ini terjangkau WIFI gratis bagi seluruh siswa, guru, dan karyawan dengan kecepatan 100Mbps</p>
             </div>
+            <div class="newkonten" id="newkonten">
+              <a href="#">Learn More</a>
+            </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100">
-            <div class="konten">
+          <div class="wrapper h-100" id="cardmove-ids" onmouseover="textmoveup1()" onmouseout="textgone1()">
+            <div class="konten" id="konten-ids">
               <h2 class="">Terakreditasi A</h2>
               <img src="/img/best.png" alt="" class="mb-3">
               <p>Sekolah kami telah terakreditasi A memiliki kualitas dan fasilitas yang baik guna menunjang  pembelajaran bagi para siswa disini</p>
             </div>
+            <div class="newkonten" id="newkonten">
+              <a href="#">Learn More</a>
+            </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100">
-            <div class="konten">
+          <div class="wrapper h-100" id="cardmove-idz" onmouseover="textmoveup2()" onmouseout="textgone2()">
+            <div class="konten" id="konten-idz">
               <h2>Fasilitas Laboratorium</h2>
               <img src="/img/test.png" alt="" class="mb-3">
               <p>Terdapat Labolatorium biologi, kimia dan komputer untuk memfasilitasi guru dan siswa praktik</p>
             </div>
+            <div class="newkonten" id="newkonten">
+              <a href="#">Learn More</a>
             </div>
-           
+            </div>
         </div>
-
     </div>
-
 
   </section>
 </article>
@@ -247,52 +240,54 @@
 <script>
 
 function sekrolMobile(x) {
-   if (x.matches) { 
-     document.getElementById("navbarwhenscroll").classList.add("sticky-top", "navbar-dark");
-     document.getElementById("navbarwhenscroll").style.backgroundColor = "#217AD3";
-     document.getElementById("logo-sekolah-putih").style.display = "unset";
-     document.getElementById("login-id").style.color = "#f1c40f";
-   } 
-   else {
-     document.getElementById("navbarwhenscroll").classList.remove("sticky-top", "navbar-dark");
-     document.getElementById("logo-sekolah-putih").style.display = "none";
-     document.getElementById("login-id").style.color = "#217AD3";
-     document.getElementById("navbarwhenscroll").style.backgroundColor = "white";
-   }
- }
- 
- var x = window.matchMedia("(max-width: 991px)");
- sekrolMobile(x);
- x.addListener(sekrolMobile);
-  
- //////////////////////////////////////////////////////////////////////////////////////////
-
+  if (x.matches) { 
+    mynavbar.classList.add("sticky-top", "navbar-dark");
+    mynavbar.style.backgroundColor = "#217AD3";
+    document.getElementById("logo-sekolah-putih").style.display = "unset";
+    document.getElementById("login-id").style.color = "#f1c40f";
+  } 
+  else {
+    mynavbar.classList.remove("sticky-top", "navbar-dark");
+    mynavbar.style.backgroundColor = "white";
+    document.getElementById("logo-sekolah-putih").style.display = "none";
+    document.getElementById("login-id").style.color = "#217AD3";
+    
+  }
+}
+// ------  
 function sekrolDesktop(z) {
     window.onscroll = function() {sekrol()};
     if (z.matches) {
       function sekrol() {
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-          document.getElementById("navbarwhenscroll").classList.add("sticky-top", "navbar-dark");
-          document.getElementById("navbarwhenscroll").style.backgroundColor = "#217AD3";
-          document.getElementById("navbar-nav-id").style.marginLeft = "auto";
-          document.getElementById("navbar-nav-id").style.fontSize = "14px";
+        if (document.body.scrollTop > 650 || document.documentElement.scrollTop > 650) {
+          cardeelem0.classList.add("movetoup");
+          cardeelem1.classList.add("movetoup");
+          cardeelem2.classList.add("movetoup");
+        }
+        else if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          mynavbar.classList.add("sticky-top", "navbar-dark");
+          mynavbar.style.backgroundColor = "#217ad3";
+          mynavbarnav.style.marginLeft = "auto";
+          mynavbarnav.style.fontSize = "14px";
           document.getElementById("logo-sekolah-putih").style.display = "unset";
-          document.getElementById("login-id").style.color = "#f1c40f";       
+          document.getElementById("login-id").style.color = "#f1c40f";    
         }
         else if (document.body.scrollTop < 500 || document.documentElement.scrollTop < 500) {
-          document.getElementById("navbarwhenscroll").classList.remove("sticky-top", "navbar-dark");
-          document.getElementById("navbarwhenscroll").style.backgroundColor = "white";
-          document.getElementById("logo-sekolah").style.display = "none";
-          document.getElementById("navbar-nav-id").style.marginLeft = "unset";
-          document.getElementById("navbar-nav-id").style.fontSize = "unset";
+          mynavbar.classList.remove("sticky-top", "navbar-dark");
+          mynavbar.style.backgroundColor = "white";
+          mynavbarnav.style.fontSize = "unset";
+          mybox0.classList.add("movetoup");
+          mybox1.classList.add("movetoup");
+          mybox2.classList.add("movetoup");
+          mynavbarnav.style.marginLeft = "unset";
           document.getElementById("logo-sekolah-putih").style.display = "none";
           document.getElementById("login-id").style.color = "#217AD3";
-          document.getElementById("box-id").classList.add("movetoup");
-          document.getElementById("box-ids").classList.add("movetoup");
-          document.getElementById("box-idz").classList.add("movetoup");
           document.getElementById("dot").style.display = "none";
+          document.getElementById("logo-sekolah").style.display = "none";
+          
           
         } 
+        
         
         else {
          
@@ -301,95 +296,135 @@ function sekrolDesktop(z) {
     } 
     else {}
 }
-
- var z = window.matchMedia("(min-width: 992px)");
- sekrolDesktop(z);
- z.addListener(sekrolDesktop);
+// ------  
 
 
- 
-////////////////////////////////////////////////////////////////////////////
-/*
-function sekrolBigDesktop(y) {
-  window.onscroll = function() {sekrolBig()};
-  if (y.matches) {
-    function sekrolBig() {
-      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-          document.getElementById("navbarwhenscroll").classList.add("sticky-top", "navbar-dark");
-          document.getElementById("navbarwhenscroll").style.backgroundColor = "#217AD3";
-          document.getElementById("navbar-nav-id").style.marginLeft = "auto";
-          document.getElementById("navbar-nav-id").style.fontSize = "20px";
-          document.getElementById("logo-sekolah-putih").style.display = "unset";
-          document.getElementById("login-id").style.color = "#f1c40f";       
-      }
-    }
-  }
+
+
+// ------------------------> Whenmouseover element move to up
+
+
+function boxmuncul1() {
+  cardeelem0.classList.add("movetoup");
+  cardeelem1.classList.add("movetoup");
+  cardeelem2.classList.add("movetoup");
+  document.getElementById("dot1").style.display = "none";
 }
-var y = window.matchMedia("(min-width: 1910px)");
-sekrolBigDesktop(y);
-y.addListener(sekrolBigDesktop);
-*/
-
-////////////////////////////////////////////////////////////////////////////
- 
-      
 function boxmuncul() {
-    document.getElementById("box-id").classList.add("movetoup");
-    document.getElementById("box-ids").classList.add("movetoup");
-    document.getElementById("box-idz").classList.add("movetoup");
+    mybox0.classList.add("movetoup");
+    mybox1.classList.add("movetoup");
+    mybox2.classList.add("movetoup");
     document.getElementById("dot").style.display = "none";
 }
 
+
 function scrolltoTop() {
-  window.scrollTo(0, 0)
+  window.scrollTo(0, 0);
 }
+// ------------------------> EndLine Whenmouseover element move to up
 
 
 
 
+// --------------------------------- wrapper change content
+function textmoveup0(x) {
+  if (z.matches) {
+    elem0.style.display = "none";
+    newelem0.style.display = "block";
+  }
+  else {
+    return false
+  }
+}
+function textgone0(x) {
+  if (z.matches) {
+    elem0.style.display = "block";
+    newelem0.style.display = "none";
+  }
+  else {
+    return false
+  }
+}
+// -----
+function textmoveup1(x) {
+  if (z.matches) {
+    elem1.style.display = "none";
+    newelem1.style.display = "block";
+  }
+  else {
+    return false
+  }
+}
+function textgone1(x) {
+  if (z.matches) {
+    elem1.style.display = "block";
+    newelem1.style.display = "none";
+  }
+  else {
+    return false
+  }
+}
+// -----
+function textmoveup2(x) {
+  if (z.matches) {
+    elem2.style.display = "none";
+    newelem2.style.display = "block";
+  }
+  else {
+    return false
+  }
+}
+function textgone2(x) {
+  if (z.matches) {
+    elem2.style.display = "block";
+    newelem2.style.display = "none";
+  }
+  else {
+    return false
+  }
+}
+// ---------------------------------> EndLine wrapper change content
 
-/*
-      window.onscroll = function() {functionscroll()};
- 
-           function functionscroll() {
-               if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
-                 document.getElementById("navbar-brand-id").style.display = "block";
-                 document.getElementById("navbar-nav-id").style.marginLeft = "auto";
-                 document.getElementById("navbarwhenscroll").classList.add("sticky-top");
-               } else {
-                 document.getElementById("navbar-brand-id").style.display = "none";
-                 document.getElementById("navbar-nav-id").style.marginLeft = "unset";
-                 document.getElementById("navbarwhenscroll").classList.remove("sticky-top");
-               }
-           }
- 
- 
-           
-        
-           window.onscroll = function() {functionscrollbox()};
-           function functionscrollbox() {
-             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-               var elem = document.getElementById("box-id");
-               var pos = -50;
-               var id = setInterval(frame);
-               function frame() {
-                 if (pos == 0) {
-                   clearInterval(id);
-                 } 
-                 else {
-                   pos++;
-                   elem.style.position = "relative";
-                   elem.style.bottom = pos + "%";
-                   elem.style.paddingTop = "2em";
-                   elem.style.paddingBottom = "1em";
-                 }
-               } 
-             } 
-             else {
-               stop(scroll());
-             }
-           }
-   */
+
+
+
+// --------------------------> Variabel
+var elem0 = document.getElementsByClassName("konten")[0];
+var elem1 = document.getElementsByClassName("konten")[1];
+var elem2 = document.getElementsByClassName("konten")[2];
+//--
+var newelem0 = document.getElementsByClassName("newkonten")[0];
+var newelem1 = document.getElementsByClassName("newkonten")[1];
+var newelem2 = document.getElementsByClassName("newkonten")[2];
+//--
+var cardeelem0 = document.getElementsByClassName("wrapper")[0];
+var cardeelem1 = document.getElementsByClassName("wrapper")[1];
+var cardeelem2 = document.getElementsByClassName("wrapper")[2];
+//--
+var mynavbar = document.getElementsByClassName("navbar")[0];
+var mynavbarnav = document.getElementsByClassName("navbar-nav")[0];
+//--
+var mybox0 = document.getElementsByClassName("box")[0];
+var mybox1 = document.getElementsByClassName("box")[1];
+var mybox2 = document.getElementsByClassName("box")[2];
+//--
+var x = window.matchMedia("(max-width: 991px)");
+ sekrolMobile(x);
+ x.addListener(sekrolMobile);
+//--
+var z = window.matchMedia("(min-width: 992px)");
+ sekrolDesktop(z);
+ z.addListener(sekrolDesktop);
+// --------------------------> EndLineVariabel
+
+
+//  ======================
+            /////////
+          //=  0//|==============                         
+            /////////
+//  ======================
+
+
 </script> 
 
 

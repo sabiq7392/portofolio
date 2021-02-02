@@ -11,9 +11,9 @@ body {
   -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   background-color: white;
-  z-index: 1;
-  -webkit-animation: loading 1s;
-          animation: loading 1s;
+  z-index: 15;
+  -webkit-animation: loading 0.5s;
+          animation: loading 0.5s;
 }
 
 .navbar .navbar-toggler {
@@ -132,8 +132,10 @@ body {
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   border-top: 0.15em solid #217AD3;
   border-radius: 4px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .box a, #box-id a, #box-ids a, #box-idz a {
@@ -151,8 +153,6 @@ body {
 .box:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .keunggulan {
@@ -177,9 +177,22 @@ body {
 }
 
 .keunggulan .box-keunggulan .wrapper {
+  position: relative;
+  display: none;
+  -webkit-transition: -webkit-animation 5s;
+  transition: -webkit-animation 5s;
+  transition: animation 5s;
+  transition: animation 5s, -webkit-animation 5s;
+  -webkit-transition: background-image 1s;
+  transition: background-image 1s;
+  border-radius: 5px;
   padding: 1em;
   -webkit-box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+.keunggulan .box-keunggulan .wrapper .konten {
+  display: block;
 }
 
 .keunggulan .box-keunggulan .wrapper .konten h2 {
@@ -193,6 +206,10 @@ body {
 .keunggulan .box-keunggulan .wrapper .konten p {
   margin: 0 10px;
   font-size: 18px;
+}
+
+.keunggulan .box-keunggulan .wrapper #newkonten {
+  display: none;
 }
 
 .totop-wrapper {
@@ -257,23 +274,23 @@ body {
 
 @-webkit-keyframes boxmoveright {
   from {
-    left: -50px;
+    left: -550px;
     opacity: 0;
   }
   to {
     opacity: 1;
-    bottom: 0;
+    bottom: 0px;
   }
 }
 
 @keyframes boxmoveright {
   from {
-    left: -50px;
+    left: -550px;
     opacity: 0;
   }
   to {
     opacity: 1;
-    bottom: 0;
+    bottom: 0px;
   }
 }
 
@@ -307,11 +324,25 @@ body {
   #dot {
     display: none;
   }
+  #dot1 {
+    display: none;
+  }
   .slide, .carousel {
     display: none !important;
   }
   .box {
     margin-bottom: 1em;
+  }
+  .box-keunggulan .wrapper {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    display: block !important;
+  }
+  .box-keunggulan .wrapper p {
+    padding: 1em;
   }
 }
 
@@ -328,19 +359,6 @@ body {
   }
   .linelarge {
     width: 100% !important;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .box-keunggulan .wrapper {
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-  }
-  .box-keunggulan .wrapper p {
-    padding: 1em;
   }
 }
 
