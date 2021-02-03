@@ -41,8 +41,8 @@ body {
 .navbar .collapse .nav-link {
   font-weight: 600;
   padding: 1em;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .navbar .collapse .nav-link:hover {
@@ -108,7 +108,42 @@ body {
 }
 
 .selamat-wrapper {
+  -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   background-color: white;
+}
+
+.selamat-wrapper .medsos-wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+.selamat-wrapper .medsos-wrapper ul li {
+  padding: 0.5em 1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.selamat-wrapper .medsos-wrapper ul li a {
+  text-decoration: none;
+}
+
+.selamat-wrapper .medsos-wrapper ul li a img {
+  width: 34px;
+}
+
+.selamat-wrapper .medsos-wrapper ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .selamat-wrapper .selamat {
@@ -119,13 +154,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a {
+.bagiandarikami a {
   text-decoration: none;
 }
 
-a .box {
+.bagiandarikami a .box {
   position: relative;
-  display: none;
   background-color: white;
   padding-top: 2em;
   padding-bottom: 1em;
@@ -138,11 +172,11 @@ a .box {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-a .box ul {
+.bagiandarikami a .box ul {
   list-style-type: none;
 }
 
-a .box ul li {
+.bagiandarikami a .box ul li {
   font-family: "Roboto", sans-serif;
   margin-left: -2em;
 }
@@ -175,13 +209,14 @@ a .box ul li {
 
 .keunggulan .box-keunggulan .wrapper {
   position: relative;
-  display: none;
   -webkit-transition: -webkit-animation 5s;
   transition: -webkit-animation 5s;
   transition: animation 5s;
   transition: animation 5s, -webkit-animation 5s;
   border-radius: 5px;
   padding: 1em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
 }
@@ -201,6 +236,13 @@ a .box ul li {
 .keunggulan .box-keunggulan .wrapper .konten p {
   margin: 0 10px;
   font-size: 18px;
+}
+
+.keunggulan .box-keunggulan .wrapper:hover {
+  background-color: #217AD3;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .totop-wrapper {
@@ -312,24 +354,22 @@ a .box ul li {
     -webkit-animation: none !important;
             animation: none !important;
   }
-  #dot {
-    display: none;
-  }
-  #dot1 {
-    display: none;
-  }
   .slide, .carousel {
     display: none !important;
   }
   .box {
     margin-bottom: 1em;
   }
+  .box-keunggulan {
+    -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+  }
   .box-keunggulan .wrapper {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
     display: block !important;
   }
   .box-keunggulan .wrapper p {
@@ -353,7 +393,7 @@ a .box ul li {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1919px) {
   .navbar .navbar-brand #logo-sekolah-putih {
     width: 400px;
   }

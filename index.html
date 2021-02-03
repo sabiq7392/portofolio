@@ -15,15 +15,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!--------CSS-------->
     <link rel="stylesheet" href="css/style.css">
-    <script src="javascript.js"></script>
 
     <title>SMAN 1 TAJURHALANG</title>
   </head>
-  <body>
+  <body onunload="forcetop()">
+
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarwhenscroll">
       <div class="container-fluid">
         <a class="navbar-brand" id="navbar-brand-id" href="#">
-          <img src="img/Logo.png" alt="" id="logo-sekolah">
           <img src="img/Logo-putih.png" alt="" id="logo-sekolah-putih">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,7 +90,7 @@
           <div class="hero-image-nopad">
             <div class="hero-image-content text-center slide1" style="width: 100%; height: 81vh;">
               <div class="mycarousel-caption d-md-block ">
-                <h3 >Pengajar yang bersertifikat</h3>
+                <h3 >Pengajar yang Profesional</h3>
               </div>
             </div>
           </div>
@@ -99,9 +98,8 @@
         <div class="carousel-item"  data-bs-interval="5000">
           <div class="hero-image-nopad">
             <div class="hero-image-content text-center slide2" style="width: 100%; height: 81vh;">
-              
               <div class="mycarousel-caption d-md-block" > 
-                <h3>Laboratorium Komputer</h3>
+                <h3>Laboratorium</h3>
               </div>
             </div>
           </div>
@@ -118,13 +116,20 @@
     </div>
     
     <div class="selamat-wrapper mb-5">
-      <p class="text-center selamat myshadow">SELAMAT DATANG DI SMAN 1 TAJURHALANG</p>
+      <div class="medsos-wrapper">
+        <ul>
+          <li><a href="#"><img src="/img/whatsapp.png" alt=""></a></li>
+          <li><a href="#"><img src="/img/instagram.png" alt=""></a></li>
+          <li><a href="#"><img src="/img/facebook.png" alt=""></a></li>
+          <li><a href="#"><img src="/img/youtube.png" alt=""></a></li>
+        </ul>
+      </div>
+      <!--<p class="text-center selamat myshadow">SELAMAT DATANG DI SMAN 1 TAJURHALANG</p> -->
     </div>
     <!----------------------------------------------Bagian dari Kami----------------------------------------------------------->
     
-    <div class="container" onmouseover="boxmuncul()">
+    <div class="container bagiandarikami" onmouseover="boxmuncul()">
       <h1 class="text-center mb-5"><i class="fas fa-users"></i> Bagian Dari Kami</h1>
-      <p class="text-center" id="dot"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></p>
           <div class="row margin-row">
     
             <div class="col-md-12 col-lg-4">
@@ -168,39 +173,65 @@
     
     <div class="container-fluid bg-white keunggulan text-center mt-5" onmouseover="boxmuncul1()">
       <div class="p-5">
-        <h1 class="">Keunggulan Kami</h1>
+        <h1 class="" style="font-size: 60px;">Keunggulan Kami</h1>
         <p>Sekolah Kami selalu melakukan perbaikan pembelajaran, lingkungan yang asri, nyaman dan ramah</p>
         <div class="line m-auto mb-5"></div>
-        <p class="text-center" id="dot1"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></p>
       </div>  
     
       <div class="row">
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-id">
+          <div class="wrapper h-100" id="cardmove-id" onmouseover="biruPutih0()" onmouseout="putihHitam0()">
             <div class="konten" id="konten-id">
               <h2 class="">Akses Internet Gratis</h2>
-              <img src="/img/wifi.png" alt="" class="mb-3">
+              <img src="/img/wifi.png" alt="" class="imgKeunggulan mb-3">
               <p>Di semua area sekolah ini terjangkau WIFI gratis bagi seluruh siswa, guru, dan karyawan dengan kecepatan 100Mbps</p>
             </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-ids">
+          <div class="wrapper h-100" id="cardmove-ids" onmouseover="biruPutih1()" onmouseout="putihHitam1()">
             <div class="konten" id="konten-ids">
               <h2 class="">Terakreditasi A</h2>
-              <img src="/img/best.png" alt="" class="mb-3">
-              <p>Sekolah kami telah terakreditasi A memiliki kualitas dan fasilitas yang baik guna menunjang  pembelajaran bagi para siswa disini</p>
+              <img src="/img/medal.png" alt="" class="imgKeunggulan mb-3">
+              <p>Sekolah kami telah terakreditasi A ilai tertinggi yang diberikan oleh Dinas Pendidikan RI</p>
             </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-idz">
+          <div class="wrapper h-100" id="cardmove-idz" onmouseover="biruPutih2()" onmouseout="putihHitam2()">
             <div class="konten" id="konten-idz">
               <h2>Fasilitas Laboratorium</h2>
-              <img src="/img/test.png" alt="" class="mb-3">
+              <img src="/img/test.png" alt="" class="imgKeunggulan mb-3">
               <p>Terdapat Labolatorium biologi, kimia dan komputer untuk memfasilitasi guru dan siswa praktik</p>
             </div>
             </div>
+        </div>
+        <div class="col-md-12 col-lg-4 box-keunggulan">
+          <div class="wrapper h-100" id="cardmove-id" onmouseover="biruPutih3()" onmouseout="putihHitam3()">
+            <div class="konten" id="konten-id">
+              <h2 class="">Akses Internet Gratis</h2>
+              <img src="/img/wifi.png" alt="" class="imgKeunggulan mb-3">
+              <p>Di semua area sekolah ini terjangkau WIFI gratis bagi seluruh siswa, guru, dan karyawan dengan kecepatan 100Mbps</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4 box-keunggulan">
+          <div class="wrapper h-100" id="cardmove-id" onmouseover="biruPutih4()" onmouseout="putihHitam4()">
+            <div class="konten" id="konten-id">
+              <h2 class="">Akses Internet Gratis</h2>
+              <img src="/img/wifi.png" alt="" class="imgKeunggulan mb-3">
+              <p>Di semua area sekolah ini terjangkau WIFI gratis bagi seluruh siswa, guru, dan karyawan dengan kecepatan 100Mbps</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4 box-keunggulan">
+          <div class="wrapper h-100" id="cardmove-id" onmouseover="biruPutih5()" onmouseout="putihHitam5()">
+            <div class="konten" id="konten-id">
+              <h2 class="">Akses Internet Gratis</h2>
+              <img src="/img/wifi.png" alt="" class="imgKeunggulan mb-3">
+              <p>Di semua area sekolah ini terjangkau WIFI gratis bagi seluruh siswa, guru, dan karyawan dengan kecepatan 100Mbps</p>
+            </div>
+          </div>
         </div>
     </div>
 
@@ -264,7 +295,7 @@ function sekrolDesktop(z) {
           document.getElementById("logo-sekolah-putih").style.display = "unset";
           document.getElementById("login-id").style.color = "#55efc4";    
         }
-        else if (document.body.scrollTop < 500 || document.documentElement.scrollTop < 500) {
+        else if (document.body.scrollTop < 500 || document.documentElement.scrollTop < 500 ) {
           mynavbar.classList.remove("sticky-top", "navbar-dark");
           mynavbar.style.backgroundColor = "white";
           mynavbarnav.style.fontSize = "unset";
@@ -274,16 +305,8 @@ function sekrolDesktop(z) {
           mynavbarnav.style.marginLeft = "unset";
           document.getElementById("logo-sekolah-putih").style.display = "none";
           document.getElementById("login-id").style.color = "#217AD3";
-          document.getElementById("dot").style.display = "none";
-          document.getElementById("logo-sekolah").style.display = "none";
-          
-          
         } 
-        
-        
-        else {
-         
-        }
+        else {}
       }
     } 
     else {}
@@ -300,13 +323,11 @@ function boxmuncul1() {
   cardeelem0.classList.add("movetoup");
   cardeelem1.classList.add("movetoup");
   cardeelem2.classList.add("movetoup");
-  document.getElementById("dot1").style.display = "none";
 }
 function boxmuncul() {
     mybox0.classList.add("movetoup");
     mybox1.classList.add("movetoup");
     mybox2.classList.add("movetoup");
-    document.getElementById("dot").style.display = "none";
 }
 
 
@@ -319,71 +340,64 @@ function scrolltoTop() {
 
 
 // --------------------------------- wrapper change content
-function textmoveup0(x) {
-  if (z.matches) {
-    elem0.style.display = "none";
-    newelem0.style.display = "block";
-  }
-  else {
-    return false
-  }
+function biruPutih0() {
+  gambarKeunggulan0.src = "/img/wifi-white.png";
 }
-function textgone0(x) {
-  if (z.matches) {
-    elem0.style.display = "block";
-    newelem0.style.display = "none";
-  }
-  else {
-    return false
-  }
+function putihHitam0() {
+  gambarKeunggulan0.src = "/img/wifi.png";
 }
-// -----
-function textmoveup1(x) {
-  if (z.matches) {
-    elem1.style.display = "none";
-    newelem1.style.display = "block";
-  }
-  else {
-    return false
-  }
+//--
+function biruPutih1() {
+  gambarKeunggulan1.src = "/img/medal-white.png";
 }
-function textgone1(x) {
-  if (z.matches) {
-    elem1.style.display = "block";
-    newelem1.style.display = "none";
-  }
-  else {
-    return false
-  }
+function putihHitam1() {
+  gambarKeunggulan1.src = "/img/medal.png";
 }
-// -----
-function textmoveup2(x) {
-  if (z.matches) {
-    elem2.style.display = "none";
-    newelem2.style.display = "block";
-  }
-  else {
-    return false
-  }
+//--
+function biruPutih2() {
+  gambarKeunggulan2.src = "/img/test-white.png";
 }
-function textgone2(x) {
-  if (z.matches) {
-    elem2.style.display = "block";
-    newelem2.style.display = "none";
-  }
-  else {
-    return false
-  }
+function putihHitam2() {
+  gambarKeunggulan2.src = "/img/test.png";
+}
+//--
+function biruPutih3() {
+  gambarKeunggulan3.src = "/img/wifi-white.png";
+}
+function putihHitam3() {
+  gambarKeunggulan3.src = "/img/wifi.png";
+}
+//--
+function biruPutih4() {
+  gambarKeunggulan4.src = "/img/wifi-white.png";
+}
+function putihHitam4() {
+  gambarKeunggulan4.src = "/img/wifi.png";
+}
+//--
+function biruPutih5() {
+  gambarKeunggulan5.src = "/img/wifi-white.png";
+}
+function putihHitam5() {
+  gambarKeunggulan5.src = "/img/wifi.png";
 }
 // ---------------------------------> EndLine wrapper change content
-
-
 
 
 // --------------------------> Variabel
 var cardeelem0 = document.getElementsByClassName("wrapper")[0];
 var cardeelem1 = document.getElementsByClassName("wrapper")[1];
 var cardeelem2 = document.getElementsByClassName("wrapper")[2];
+var cardeelem3 = document.getElementsByClassName("wrapper")[3];
+var cardeelem4 = document.getElementsByClassName("wrapper")[4];
+var cardeelem5 = document.getElementsByClassName("wrapper")[5];
+//--
+var gambarKeunggulan0 = document.getElementsByClassName("imgKeunggulan")[0];
+var gambarKeunggulan1 = document.getElementsByClassName("imgKeunggulan")[1];
+var gambarKeunggulan2 = document.getElementsByClassName("imgKeunggulan")[2];
+var gambarKeunggulan3 = document.getElementsByClassName("imgKeunggulan")[3];
+var gambarKeunggulan4 = document.getElementsByClassName("imgKeunggulan")[4];
+var gambarKeunggulan5 = document.getElementsByClassName("imgKeunggulan")[5];
 //--
 var mynavbar = document.getElementsByClassName("navbar")[0];
 var mynavbarnav = document.getElementsByClassName("navbar-nav")[0];
