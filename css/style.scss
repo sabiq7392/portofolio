@@ -246,12 +246,12 @@ body {
 }
 @keyframes boxmoveright {
     from {
-        left: -550px;
+        left: -50px;
         opacity: 0;
     }
     to {
         opacity: 1;
-        bottom: 0px;
+        left: 0;
     }
 }
 // ------------------- Media Quaries -----------------
@@ -366,6 +366,26 @@ body {
     height: 1px;
     margin: auto;
     background-color: $myblue;
+}
+.reveal-right {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+}
+.reveal-right.active {
+    animation: boxmoveright 1.5s;
+    transform: translateY(0px);
+    opacity: 1;
+}
+.reveal-up {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+}
+.reveal-up.active {
+    animation: boxmoveup 1.5s;
+    transform: translateY(0px);
+    opacity: 1;
 }
 //---------------------------------------------------
 

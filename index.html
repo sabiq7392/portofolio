@@ -124,13 +124,12 @@
           <li><a href="#"><img src="/img/youtube.png" alt=""></a></li>
         </ul>
       </div>
-      <!--<p class="text-center selamat myshadow">SELAMAT DATANG DI SMAN 1 TAJURHALANG</p> -->
     </div>
     <!----------------------------------------------Bagian dari Kami----------------------------------------------------------->
     
-    <div class="container bagiandarikami" onmouseover="boxmuncul()">
+    <div class="container bagiandarikami">
       <h1 class="text-center mb-5"><i class="fas fa-users"></i> Bagian Dari Kami</h1>
-          <div class="row margin-row">
+          <div class="row margin-row reveal-right">
     
             <div class="col-md-12 col-lg-4">
               <a href="#">
@@ -171,16 +170,16 @@
     </div>
     <!---------------------------------------------- Keunggulan Kami -----------------------------------------------------------> 
     
-    <div class="container-fluid bg-white keunggulan text-center mt-5" onmouseover="boxmuncul1()">
+    <div class="container-fluid bg-white keunggulan text-center mt-5">
       <div class="p-5">
         <h1 class="" style="font-size: 60px;">Keunggulan Kami</h1>
         <p>Sekolah Kami selalu melakukan perbaikan pembelajaran, lingkungan yang asri, nyaman dan ramah</p>
         <div class="line m-auto mb-5"></div>
       </div>  
     
-      <div class="row">
+      <div class="row reveal-up">
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-id" onmouseover="biruPutih0()" onmouseout="putihHitam0()">
+          <div class="wrapper h-100" onmouseover="biruPutih0()" onmouseout="putihHitam0()">
             <div class="konten" id="konten-id">
               <h2 class="">Akses Internet Gratis</h2>
               <img src="/img/wifi.png" alt="" class="imgKeunggulan mb-3">
@@ -189,7 +188,7 @@
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-ids" onmouseover="biruPutih1()" onmouseout="putihHitam1()">
+          <div class="wrapper h-100" onmouseover="biruPutih1()" onmouseout="putihHitam1()">
             <div class="konten" id="konten-ids">
               <h2 class="">Terakreditasi A</h2>
               <img src="/img/medal.png" alt="" class="imgKeunggulan mb-3">
@@ -198,7 +197,7 @@
           </div>
         </div>
         <div class="col-md-12 col-lg-4 box-keunggulan">
-          <div class="wrapper h-100" id="cardmove-idz" onmouseover="biruPutih2()" onmouseout="putihHitam2()">
+          <div class="wrapper h-100" onmouseover="biruPutih2()" onmouseout="putihHitam2()">
             <div class="konten" id="konten-idz">
               <h2>Fasilitas Laboratorium</h2>
               <img src="/img/test.png" alt="" class="imgKeunggulan mb-3">
@@ -281,13 +280,7 @@ function sekrolDesktop(z) {
     window.onscroll = function() {sekrol()};
     if (z.matches) {
       function sekrol() {
-        if (document.body.scrollTop > 650 || document.documentElement.scrollTop > 650) {
-          cardeelem0.classList.add("movetoup");
-          cardeelem1.classList.add("movetoup");
-          cardeelem2.classList.add("movetoup");
-          document.getElementById("dot1").style.display = "none";
-        }
-        else if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+       if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
           mynavbar.classList.add("sticky-top", "navbar-dark");
           mynavbar.style.backgroundColor = "#217ad3";
           mynavbarnav.style.marginLeft = "auto";
@@ -299,9 +292,6 @@ function sekrolDesktop(z) {
           mynavbar.classList.remove("sticky-top", "navbar-dark");
           mynavbar.style.backgroundColor = "white";
           mynavbarnav.style.fontSize = "unset";
-          mybox0.classList.add("movetoup");
-          mybox1.classList.add("movetoup");
-          mybox2.classList.add("movetoup");
           mynavbarnav.style.marginLeft = "unset";
           document.getElementById("logo-sekolah-putih").style.display = "none";
           document.getElementById("login-id").style.color = "#217AD3";
@@ -312,31 +302,41 @@ function sekrolDesktop(z) {
     else {}
 }
 // ------  
+window.addEventListener('scroll', reveal);
+function reveal() {
+  var reveals = document.querySelectorAll('.reveal-right');
+  var revealsDua = document.querySelectorAll('.reveal-up');
+  
+  for(var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 50;
 
+    if(revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add('active');
+    }
+    else {
+      reveals[i].classList.remove('active');
+    }
+  }
+  for(var j = 0; j < revealsDua.length; j++) {
+    var windowheightJ = window.innerHeight;
+    var revealtopJ = revealsDua[j].getBoundingClientRect().top;
+    var revealpointJ = 50;
 
-
-
-// ------------------------> Whenmouseover element move to up
-
-
-function boxmuncul1() {
-  cardeelem0.classList.add("movetoup");
-  cardeelem1.classList.add("movetoup");
-  cardeelem2.classList.add("movetoup");
+    if(revealtopJ < windowheight - revealpointJ) {
+      revealsDua[j].classList.add('active');
+    }
+    else {
+      revealsDua[j].classList.remove('active');
+    }
+  }
 }
-function boxmuncul() {
-    mybox0.classList.add("movetoup");
-    mybox1.classList.add("movetoup");
-    mybox2.classList.add("movetoup");
-}
-
-
+// ------------------------> Whenmouseover window move to up
 function scrolltoTop() {
   window.scrollTo(0, 0);
 }
-// ------------------------> EndLine Whenmouseover element move to up
-
-
+// ------------------------> EndLine window element move to up
 
 
 // --------------------------------- wrapper change content

@@ -307,23 +307,23 @@ body {
 
 @-webkit-keyframes boxmoveright {
   from {
-    left: -550px;
+    left: -50px;
     opacity: 0;
   }
   to {
     opacity: 1;
-    bottom: 0px;
+    left: 0;
   }
 }
 
 @keyframes boxmoveright {
   from {
-    left: -550px;
+    left: -50px;
     opacity: 0;
   }
   to {
     opacity: 1;
-    bottom: 0px;
+    left: 0;
   }
 }
 
@@ -423,5 +423,35 @@ body {
   height: 1px;
   margin: auto;
   background-color: #217AD3;
+}
+
+.reveal-right {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+}
+
+.reveal-right.active {
+  -webkit-animation: boxmoveright 1.5s;
+          animation: boxmoveright 1.5s;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.reveal-up {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+}
+
+.reveal-up.active {
+  -webkit-animation: boxmoveup 1.5s;
+          animation: boxmoveup 1.5s;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
