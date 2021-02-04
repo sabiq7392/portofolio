@@ -8,6 +8,7 @@ body {
 }
 
 .navbar {
+  height: 11vh;
   -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   background-color: white;
@@ -21,11 +22,16 @@ body {
 }
 
 .navbar .navbar-brand {
-  display: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.navbar .navbar-brand #logo-sekolah, .navbar .navbar-brand #logo-sekolah-putih {
-  width: 263px;
+.navbar .navbar-brand #logo-sekolah-putih {
+  width: 30vh;
   display: none;
 }
 
@@ -40,7 +46,7 @@ body {
 
 .navbar .collapse .nav-link {
   font-weight: 600;
-  padding: 1em;
+  margin: 0 0.5em;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -68,7 +74,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #217AD3;
-  height: 81vh;
+  height: 82vh;
   width: 100%;
 }
 
@@ -108,6 +114,16 @@ body {
 }
 
 .selamat-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7vh;
   -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
   background-color: white;
@@ -128,7 +144,7 @@ body {
 }
 
 .selamat-wrapper .medsos-wrapper ul li {
-  padding: 0.5em 1em;
+  padding: 0 1em;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -144,14 +160,6 @@ body {
 .selamat-wrapper .medsos-wrapper ul li:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-.selamat-wrapper .selamat {
-  padding: 1em;
-  font-weight: 600;
-  -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
-  font-family: "Roboto", sans-serif;
 }
 
 .bagiandarikami a {
@@ -193,11 +201,20 @@ body {
   height: fit-content;
 }
 
-.keunggulan div p {
-  font-size: 14px;
+.keunggulan .title-keunggulan {
+  border: 1px solid white;
 }
 
-.keunggulan div .line {
+.keunggulan .title-keunggulan h1 {
+  margin-top: 5em;
+  font-size: 60px;
+}
+
+.keunggulan .title-keunggulan p {
+  font-size: 16px;
+}
+
+.keunggulan .title-keunggulan .line {
   width: 500px;
   height: 1px;
   background-color: #217AD3;
@@ -327,7 +344,39 @@ body {
   }
 }
 
+@media screen and (max-width: 460px) {
+  .keunggulan h1 {
+    font-size: 35px !important;
+  }
+  .hero-image .hero-image-content img {
+    width: 350px !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .carousel, .slide {
+    display: none !important;
+  }
+  .selamat-wrapper {
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .line {
+    width: 100% !important;
+  }
+  .linelarge {
+    width: 100% !important;
+  }
+}
+
 @media screen and (max-width: 991px) {
+  .navbar {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
   .navbar .collapse:not(.show) {
     display: none !important;
   }
@@ -335,6 +384,8 @@ body {
     display: block;
   }
   .navbar .collapse .nav-link {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
     padding-left: 0 !important;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -342,6 +393,9 @@ body {
   .navbar .collapse .nav-link:hover {
     -webkit-transform: none;
             transform: none;
+  }
+  .hero-image .hero-image-content img {
+    width: 400px;
   }
   .box {
     display: block !important;
@@ -353,9 +407,6 @@ body {
   .movetoup {
     -webkit-animation: none !important;
             animation: none !important;
-  }
-  .slide, .carousel {
-    display: none !important;
   }
   .box {
     margin-bottom: 1em;
@@ -374,22 +425,6 @@ body {
   }
   .box-keunggulan .wrapper p {
     padding: 1em;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .navbar .navbar-brand #logo-sekolah-putih {
-    width: 210px !important;
-    height: 50px !important;
-  }
-}
-
-@media screen and (max-width: 615px) {
-  .line {
-    width: 100% !important;
-  }
-  .linelarge {
-    width: 100% !important;
   }
 }
 
