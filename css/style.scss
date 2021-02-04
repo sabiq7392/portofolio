@@ -19,8 +19,22 @@ body {
     z-index: 15;
     animation: loading 0.5s;
 
+
     .navbar-toggler {
+        border: none!important;
         margin-left:auto!important ;
+        transition: 0.4s;
+        #myclose {
+            display: none;
+        }
+    }
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none;
+        box-shadow: none;
+        transform: scale(1.2);
+       
     }
     .navbar-brand {
         display:flex;
@@ -319,7 +333,7 @@ body {
                 transition: 0.3s;
             }
             .nav-link:hover {
-                transform: none;
+                transform: scale(1.03);
             }
         }
     }

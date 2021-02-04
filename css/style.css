@@ -18,7 +18,24 @@ body {
 }
 
 .navbar .navbar-toggler {
+  border: none !important;
   margin-left: auto !important;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navbar .navbar-toggler #myclose {
+  display: none;
+}
+
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active,
+.navbar .navbar-toggler-icon:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .navbar .navbar-brand {
@@ -391,8 +408,8 @@ body {
     transition: 0.3s;
   }
   .navbar .collapse .nav-link:hover {
-    -webkit-transform: none;
-            transform: none;
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
   }
   .hero-image .hero-image-content img {
     width: 400px;
