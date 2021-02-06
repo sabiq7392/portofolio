@@ -22,6 +22,7 @@ body {
   margin-left: auto !important;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  color: white;
 }
 
 .navbar .navbar-toggler #myclose {
@@ -36,6 +37,7 @@ body {
           box-shadow: none;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  color: white;
 }
 
 .navbar .navbar-brand {
@@ -62,15 +64,17 @@ body {
 }
 
 .navbar .collapse .nav-link {
+  display: inline-block;
   font-weight: 600;
-  margin: 0 0.5em;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  padding: 1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 5px;
 }
 
 .navbar .collapse .nav-link:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .shownav {
@@ -119,18 +123,24 @@ body {
 }
 
 .hero-image-nopad .hero-image-content .mycarousel-caption {
+  -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.25);
   z-index: 10;
   color: white;
   text-align: center;
-  border: solid 2px white;
+  border: solid 3px white;
   padding: 1em 2em;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-animation: tibatibaMuncul 1s;
+          animation: tibatibaMuncul 1s;
 }
 
 .hero-image-nopad .hero-image-content .mycarousel-caption h3 {
   margin: 0;
 }
 
-.selamat-wrapper {
+.ContainerMedsos-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,7 +156,7 @@ body {
   background-color: white;
 }
 
-.selamat-wrapper .medsos-wrapper ul {
+.ContainerMedsos-wrapper .medsos-wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,21 +170,21 @@ body {
   margin: 0;
 }
 
-.selamat-wrapper .medsos-wrapper ul li {
+.ContainerMedsos-wrapper .medsos-wrapper ul li {
   padding: 0 1em;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.selamat-wrapper .medsos-wrapper ul li a {
+.ContainerMedsos-wrapper .medsos-wrapper ul li a {
   text-decoration: none;
 }
 
-.selamat-wrapper .medsos-wrapper ul li a img {
+.ContainerMedsos-wrapper .medsos-wrapper ul li a img {
   width: 34px;
 }
 
-.selamat-wrapper .medsos-wrapper ul li:hover {
+.ContainerMedsos-wrapper .medsos-wrapper ul li:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -212,7 +222,6 @@ body {
 }
 
 .keunggulan {
-  margin-bottom: 5em;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -237,11 +246,16 @@ body {
   background-color: #217AD3;
 }
 
-.keunggulan .box-keunggulan {
+.keunggulan .box-keunggulan-wrapper {
+  margin: auto;
+  width: 85vw;
+}
+
+.keunggulan .box-keunggulan-wrapper .box-keunggulan {
   margin-bottom: 5em;
 }
 
-.keunggulan .box-keunggulan .wrapper {
+.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper {
   position: relative;
   -webkit-transition: -webkit-animation 5s;
   transition: -webkit-animation 5s;
@@ -251,28 +265,28 @@ body {
   padding: 1em;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
-.keunggulan .box-keunggulan .wrapper .konten {
+.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten {
   display: block;
 }
 
-.keunggulan .box-keunggulan .wrapper .konten h2 {
+.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten h2 {
   height: 73px;
 }
 
-.keunggulan .box-keunggulan .wrapper .konten img {
+.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten img {
   width: 190px;
 }
 
-.keunggulan .box-keunggulan .wrapper .konten p {
+.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten p {
   margin: 0 10px;
   font-size: 18px;
 }
 
-.keunggulan .box-keunggulan .wrapper:hover {
+.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper:hover {
   background-color: #217AD3;
   color: white;
   -webkit-transition: 0.3s;
@@ -293,6 +307,43 @@ body {
   color: white;
   padding: 0.5em 1em;
   text-decoration: none;
+}
+
+.penerimaan {
+  background-color: #217AD3;
+  color: white;
+}
+
+.penerimaan .penerimaan-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.penerimaan .penerimaan-wrapper .Sebelahkanan h1 {
+  font-size: 50px;
+}
+
+.penerimaan .penerimaan-wrapper .SebelahKiri a {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-weight: 600;
+  background-color: white;
+  padding: 0.8em 3em;
+  border-radius: 30px;
+}
+
+.penerimaan .penerimaan-wrapper .SebelahKiri a:hover {
+  background-color: #2c3e50;
+  color: white;
 }
 
 @-webkit-keyframes loading {
@@ -361,6 +412,64 @@ body {
   }
 }
 
+@-webkit-keyframes boxmoveleft {
+  from {
+    right: -50px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes boxmoveleft {
+  from {
+    right: -50px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@-webkit-keyframes tibatibaMuncul {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tibatibaMuncul {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 460px) {
   .keunggulan h1 {
     font-size: 35px !important;
@@ -386,6 +495,12 @@ body {
   .linelarge {
     width: 100% !important;
   }
+  .penerimaan .penerimaan-wrapper {
+    padding: 4em 0 !important;
+  }
+  .penerimaan .penerimaan-wrapper .Sebelahkanan .tulisanGede {
+    font-size: 45px !important;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -401,15 +516,15 @@ body {
     display: block;
   }
   .navbar .collapse .nav-link {
-    padding-top: 1em !important;
-    padding-bottom: 1em !important;
-    padding-left: 0 !important;
+    padding: 1em;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .navbar .collapse .nav-link:hover {
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
+    background-color: #398fe4;
+    border-radius: 5px;
   }
   .hero-image .hero-image-content img {
     width: 400px;
@@ -428,20 +543,29 @@ body {
   .box {
     margin-bottom: 1em;
   }
-  .box-keunggulan {
-    -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
-            box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+  .box-keunggulan-wrapper {
+    width: 95vw !important;
   }
-  .box-keunggulan .wrapper {
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+  .box-keunggulan-wrapper .box-keunggulan .wrapper {
+    -webkit-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25) !important;
+            box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25) !important;
     height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
     display: block !important;
+    border-radius: 0 !important;
   }
-  .box-keunggulan .wrapper p {
+  .box-keunggulan-wrapper .box-keunggulan .wrapper p {
     padding: 1em;
+  }
+  .penerimaan .penerimaan-wrapper {
+    display: block !important;
+  }
+  .penerimaan .penerimaan-wrapper .Sebelahkanan {
+    margin-bottom: 2em;
+  }
+  .penerimaan .penerimaan-wrapper .Sebelahkanan h1 {
+    font-size: 50px !important;
   }
 }
 
@@ -502,6 +626,21 @@ body {
 .reveal-up.active {
   -webkit-animation: boxmoveup 1.5s;
           animation: boxmoveup 1.5s;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.reveal-left {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+}
+
+.reveal-left.active {
+  -webkit-animation: boxmoveleft 1.5s;
+          animation: boxmoveleft 1.5s;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   opacity: 1;

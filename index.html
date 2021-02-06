@@ -75,8 +75,7 @@
       
     
 <!----------------------------------------------- HERO-IMAGE -------------------------------------------------------------->
-<article>
-  <section>
+
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -116,7 +115,7 @@
       </a>
     </div>
     
-    <div class="selamat-wrapper mb-5">
+    <div class="ContainerMedsos-wrapper mb-5">
       <div class="medsos-wrapper">
         <ul>
           <li><a href="#"><img src="/img/whatsapp.png" alt=""></a></li>
@@ -170,15 +169,13 @@
       <a href="#" onclick="scrolltoTop()" class="totop"><i class="fas fa-arrow-up"></i></a>
     </div>
     <!---------------------------------------------- Keunggulan Kami -----------------------------------------------------------> 
-    
-    <div class="container-fluid bg-white keunggulan text-center mt-5">
+    <div class="container-fluid keunggulan bg-white text-center mt-5">
       <div class="title-keunggulan mb-2">
         <h1 class="mt-5">Keunggulan Kami</h1>
         <p>Sekolah Kami selalu melakukan perbaikan pembelajaran, lingkungan yang asri, nyaman dan ramah</p>
         <div class="line m-auto mb-5"></div>
-      </div>  
-    
-      <div class="row reveal-up">
+      </div>
+      <div class="row reveal-up box-keunggulan-wrapper">
         <div class="col-md-12 col-lg-4 box-keunggulan">
           <div class="wrapper h-100" onmouseover="biruPutih0()" onmouseout="putihHitam0()">
             <div class="konten" id="konten-id">
@@ -200,28 +197,28 @@
         <div class="col-md-12 col-lg-4 box-keunggulan">
           <div class="wrapper h-100" onmouseover="biruPutih2()" onmouseout="putihHitam2()">
             <div class="konten" id="konten-idz">
-              <h2>Fasilitas Laboratorium</h2>
+              <h2>Laboratorium</h2>
               <img src="/img/test.png" alt="" class="imgKeunggulan mb-3">
               <p>Terdapat Labolatorium biologi, kimia dan komputer untuk memfasilitasi guru dan siswa praktik</p>
             </div>
-            </div>
+          </div>
         </div>
-
+      </div> <!--ROW-->
     </div>
 
-  </section>
-</article>
 
 
-
-
-
-
-
-
-
-
-
+   <!---------------------------------------------- Penerimaan -----------------------------------------------------------> 
+    <div class="container-fluid text-center penerimaan bg-primary mb-5">
+      <div class="penerimaan-wrapper reveal-right p-5">
+        <div class="Sebelahkanan">
+          <h1 class="tulisanGede">Pendaftaran Peserta Didik Baru</h1>
+        </div>
+        <div class="SebelahKiri">
+          <a href="" class="btn">Daftar Sekarang</a>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -240,7 +237,7 @@ function sekrolMobile(x) {
     mynavbar.classList.add("sticky-top", "navbar-dark");
     mynavbar.style.backgroundColor = "#217AD3";
     document.getElementById("logo-sekolah-putih").style.display = "unset";
-    document.getElementById("login-id").style.color = "#f1c40f";
+    document.getElementById("login-id").style.color = "wheat";
   } 
   else {
     mynavbar.classList.remove("sticky-top", "navbar-dark");
@@ -281,6 +278,7 @@ window.addEventListener('scroll', reveal);
 function reveal() {
   var reveals = document.querySelectorAll('.reveal-right');
   var revealsDua = document.querySelectorAll('.reveal-up');
+  var revealsTiga = document.querySelectorAll('.reveal-left');
   
   for(var i = 0; i < reveals.length; i++) {
     var windowheight = window.innerHeight;
@@ -304,6 +302,18 @@ function reveal() {
     }
     else {
       revealsDua[j].classList.remove('active');
+    }
+  }
+  for(var k = 0; k < revealsTiga.length; k++) {
+    var windowheightK = window.innerHeight;
+    var revealtopK = revealsDua[k].getBoundingClientRect().top;
+    var revealpointK = 50;
+
+    if(revealtopK < windowheight - revealpointK) {
+      revealsTiga[k].classList.add('active');
+    }
+    else {
+      revealsTiga[k].classList.remove('active');
     }
   }
 }
