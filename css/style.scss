@@ -216,9 +216,6 @@ body {
                 transition:0.5s;
                 box-shadow:1px 1px 4px 2px rgba(0,0, 0, 0.25);
                 .konten {
-                    h2 {
-                        
-                    }
                     img {
                         width: 190px;
                     }
@@ -265,6 +262,13 @@ body {
         justify-content: space-around;
         
         .Sebelahkanan {
+            display: flex;
+            flex-direction: row;
+            i {
+                margin-top: 5px;
+                margin-right: 10px;
+                font-size: 50px;
+            }
             h1 {
                 font-size: 50px;
              }
@@ -286,7 +290,6 @@ body {
     }
 }
 .jurusan {
-    height: 2000px;
     box-shadow: $myshadow;
     .jurusan-wrapper {
         margin: auto;
@@ -310,17 +313,22 @@ body {
         }
     }
     .wrapper-bingung {
-        padding-top: 1.5em;
-        padding-bottom:1em ;
-        display: block;
         color: white;
         margin: auto;
         width: 80%;
         position: relative;
         transition: animation 5s;
         border-radius: 5px;
-        transition: 1s;
+        transition: 0.8s;
         box-shadow:1px 1px 4px 2px rgba(0,0, 0, 0.25);    
+    
+        a {
+            font-weight: 600;
+            display: block;
+            padding: 1.5em;
+            text-decoration: none;
+            color: white;
+        }
     }
     .wrapper-bingung:hover {
         transform: scale(1.2);
@@ -331,7 +339,7 @@ body {
         background-color: #76ca51;
     }
     .rak-buku-merah:hover {
-        background-color:#f83d3a ;
+        background-color:#ff3936 ;
     }
 }
 
@@ -420,7 +428,7 @@ body {
     .carousel, .slide {
         display: none!important;
     }
-    .selamat-wrapper {
+    .ContainerMedsos-wrapper {
         height: 10vh;
     }
 }   
@@ -503,15 +511,20 @@ body {
    }
 
     .penerimaan {
-      
-    
         .penerimaan-wrapper {
             display: block!important;
             
             .Sebelahkanan {
-                margin-bottom: 2em;
+                flex-direction: column;
+                
+                i {
+                    margin-top: 0!important;
+                    margin-right: 0!important;
+                    margin-bottom: 0.5em;
+                }
                 h1 {
                     font-size: 50px!important;
+                    margin-bottom: 0.5em;
                  }
             }
 

@@ -312,6 +312,22 @@ body {
       justify-content: space-around;
 }
 
+.penerimaan .penerimaan-wrapper .Sebelahkanan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.penerimaan .penerimaan-wrapper .Sebelahkanan i {
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 50px;
+}
+
 .penerimaan .penerimaan-wrapper .Sebelahkanan h1 {
   font-size: 50px;
 }
@@ -331,7 +347,6 @@ body {
 }
 
 .jurusan {
-  height: 2000px;
   -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
 }
@@ -366,9 +381,6 @@ body {
 }
 
 .jurusan .wrapper-bingung {
-  padding-top: 1.5em;
-  padding-bottom: 1em;
-  display: block;
   color: white;
   margin: auto;
   width: 80%;
@@ -378,10 +390,18 @@ body {
   transition: animation 5s;
   transition: animation 5s, -webkit-animation 5s;
   border-radius: 5px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   -webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.jurusan .wrapper-bingung a {
+  font-weight: 600;
+  display: block;
+  padding: 1.5em;
+  text-decoration: none;
+  color: white;
 }
 
 .jurusan .wrapper-bingung:hover {
@@ -395,7 +415,7 @@ body {
 }
 
 .jurusan .rak-buku-merah:hover {
-  background-color: #f83d3a;
+  background-color: #ff3936;
 }
 
 @-webkit-keyframes loading {
@@ -535,7 +555,7 @@ body {
   .carousel, .slide {
     display: none !important;
   }
-  .selamat-wrapper {
+  .ContainerMedsos-wrapper {
     height: 10vh;
   }
 }
@@ -610,10 +630,19 @@ body {
     display: block !important;
   }
   .penerimaan .penerimaan-wrapper .Sebelahkanan {
-    margin-bottom: 2em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .penerimaan .penerimaan-wrapper .Sebelahkanan i {
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0.5em;
   }
   .penerimaan .penerimaan-wrapper .Sebelahkanan h1 {
     font-size: 50px !important;
+    margin-bottom: 0.5em;
   }
 }
 
