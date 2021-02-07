@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -240,15 +240,8 @@ body {
   font-size: 16px;
 }
 
-.keunggulan .title-keunggulan .line {
-  width: 500px;
-  height: 1px;
-  background-color: #217AD3;
-}
-
 .keunggulan .box-keunggulan-wrapper {
   margin: auto;
-  width: 85vw;
 }
 
 .keunggulan .box-keunggulan-wrapper .box-keunggulan {
@@ -256,25 +249,19 @@ body {
 }
 
 .keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   position: relative;
   -webkit-transition: -webkit-animation 5s;
   transition: -webkit-animation 5s;
   transition: animation 5s;
   transition: animation 5s, -webkit-animation 5s;
   border-radius: 5px;
-  padding: 1em;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
-}
-
-.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten {
-  display: block;
-}
-
-.keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten h2 {
-  height: 73px;
 }
 
 .keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten img {
@@ -282,15 +269,12 @@ body {
 }
 
 .keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper .konten p {
-  margin: 0 10px;
   font-size: 18px;
 }
 
 .keunggulan .box-keunggulan-wrapper .box-keunggulan .wrapper:hover {
-  background-color: #217AD3;
-  color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .totop-wrapper {
@@ -298,7 +282,7 @@ body {
   z-index: 15;
   bottom: 5%;
   right: 3%;
-  background-color: #55efc4;
+  background-color: #22a6b3;
   border-radius: 10px;
 }
 
@@ -344,6 +328,74 @@ body {
 .penerimaan .penerimaan-wrapper .SebelahKiri a:hover {
   background-color: #2c3e50;
   color: white;
+}
+
+.jurusan {
+  height: 2000px;
+  -webkit-box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25rem 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+.jurusan .jurusan-wrapper {
+  margin: auto;
+}
+
+.jurusan .jurusan-wrapper h1 {
+  font-size: 60px;
+}
+
+.jurusan .jurusan-wrapper .wrapper {
+  color: white;
+  margin: auto;
+  width: 80%;
+  position: relative;
+  -webkit-transition: -webkit-animation 5s;
+  transition: -webkit-animation 5s;
+  transition: animation 5s;
+  transition: animation 5s, -webkit-animation 5s;
+  border-radius: 5px;
+  padding: 1em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.jurusan .jurusan-wrapper .wrapper img {
+  width: 200px;
+}
+
+.jurusan .wrapper-bingung {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  display: block;
+  color: white;
+  margin: auto;
+  width: 80%;
+  position: relative;
+  -webkit-transition: -webkit-animation 5s;
+  transition: -webkit-animation 5s;
+  transition: animation 5s;
+  transition: animation 5s, -webkit-animation 5s;
+  border-radius: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.jurusan .wrapper-bingung:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 2;
+}
+
+.jurusan .rak-buku-hijau:hover {
+  background-color: #76ca51;
+}
+
+.jurusan .rak-buku-merah:hover {
+  background-color: #f83d3a;
 }
 
 @-webkit-keyframes loading {
@@ -543,9 +595,6 @@ body {
   .box {
     margin-bottom: 1em;
   }
-  .box-keunggulan-wrapper {
-    width: 95vw !important;
-  }
   .box-keunggulan-wrapper .box-keunggulan .wrapper {
     -webkit-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25) !important;
             box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25) !important;
@@ -553,7 +602,6 @@ body {
     height: -moz-fit-content !important;
     height: fit-content !important;
     display: block !important;
-    border-radius: 0 !important;
   }
   .box-keunggulan-wrapper .box-keunggulan .wrapper p {
     padding: 1em;
@@ -584,14 +632,36 @@ body {
   }
 }
 
+.my-bg-orange {
+  background-color: #f0932b;
+  color: white;
+}
+
+.my-bg-red {
+  background-color: #eb4d4b;
+  color: white;
+}
+
+.my-bg-green {
+  background-color: #6ab04c;
+  color: white;
+}
+
+.my-bg-blue {
+  background-color: #217AD3;
+  color: white;
+}
+
+.line {
+  width: 50vw;
+  height: 1px;
+  background-color: #217AD3;
+}
+
 .movetoup {
   display: block !important;
   -webkit-animation: boxmoveup 2s;
           animation: boxmoveup 2s;
-}
-
-.myblue {
-  color: #217AD3;
 }
 
 .linelarge {

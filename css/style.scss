@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     font-family: 'Raleway', sans-serif;
 }
 .navbar {
@@ -200,43 +200,38 @@ body {
         p {
             font-size: 16px;
         }
-        .line {
-            width: 500px;
-            height: 1px;
-            background-color: $myblue;
-        }
+
     }
     .box-keunggulan-wrapper {
         margin: auto;
-        width: 85vw;
         .box-keunggulan {
             margin-bottom:$mymargin;
             .wrapper {
+                padding-top: 1em;
+                padding-left:1em ;
+                padding-right:1em ;
                 position: relative;
                 transition: animation 5s;
                 border-radius: 5px;
-                padding: 1em;
-                transition: 0.3s;
+                transition:0.5s;
                 box-shadow:1px 1px 4px 2px rgba(0,0, 0, 0.25);
                 .konten {
-                    display: block;
                     h2 {
                         
-                        height: 73px;
                     }
                     img {
                         width: 190px;
                     }
                     p {
-                        margin:0 10px;
+                       
                         font-size: 18px;
                     }
                 }
+               
             }
             .wrapper:hover {
-                background-color: $myblue;
-                color: white;
-                transition: 0.3s;
+                
+                transform: scale(1.05);
             }
         }
     }
@@ -247,7 +242,7 @@ body {
     z-index: 15;
     bottom: 5%;
     right: 3%;
-    background-color: #55efc4;
+    background-color: #22a6b3;
     border-radius: 10px;
 
     .totop {
@@ -290,6 +285,59 @@ body {
 
     }
 }
+.jurusan {
+    height: 2000px;
+    box-shadow: $myshadow;
+    .jurusan-wrapper {
+        margin: auto;
+        h1 {
+            font-size: 60px;
+        }
+        .wrapper {
+            color: white;
+            margin: auto;
+            width: 80%;
+            position: relative;
+            transition: animation 5s;
+            border-radius: 5px;
+            padding: 1em;
+            transition: 0.3s;
+            box-shadow:1px 1px 4px 2px rgba(0,0, 0, 0.25);
+            
+            img {
+                width: 200px;
+            }
+        }
+    }
+    .wrapper-bingung {
+        padding-top: 1.5em;
+        padding-bottom:1em ;
+        display: block;
+        color: white;
+        margin: auto;
+        width: 80%;
+        position: relative;
+        transition: animation 5s;
+        border-radius: 5px;
+        transition: 1s;
+        box-shadow:1px 1px 4px 2px rgba(0,0, 0, 0.25);    
+    }
+    .wrapper-bingung:hover {
+        transform: scale(1.2);
+        z-index: 2;
+        
+    }
+    .rak-buku-hijau:hover {
+        background-color: #76ca51;
+    }
+    .rak-buku-merah:hover {
+        background-color:#f83d3a ;
+    }
+}
+
+
+
+
 // ------------------- Key Frames -----------------
 @keyframes loading {
     0% {
@@ -441,13 +489,11 @@ body {
         margin-bottom: 1em;    
    }
    .box-keunggulan-wrapper {
-       width: 95vw!important;
     .box-keunggulan {
         .wrapper {
             box-shadow: 1px 1px 4px 1px rgba(0,0, 0, 0.25)!important;
             height: fit-content!important;
             display: block!important;
-            border-radius: 0!important;
 
             p {
                 padding: 1em;
@@ -501,13 +547,32 @@ body {
 
 
 // ------------------- Spawn Classs -----------------
+.my-bg-orange {
+    background-color:#f0932b ;
+    color: white;
+}
+.my-bg-red {
+    background-color: #eb4d4b;
+    color: white;
+}
+.my-bg-green {
+    background-color:#6ab04c ;
+    color: white;
+}
+.my-bg-blue {
+    background-color: $myblue;
+    color: white;
+}
+.line {
+    width: 50vw;
+    height: 1px;
+    background-color: $myblue;
+}
 .movetoup {
     display: block!important;
     animation: boxmoveup 2s;
 }
-.myblue {
-    color: #217AD3;
-}
+
 .linelarge {
     width: 800px;
     height: 1px;
