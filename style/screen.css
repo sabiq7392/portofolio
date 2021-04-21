@@ -20,35 +20,35 @@
   .navbar .others {
     display: none;
   }
-  .hero__ .hero__box .title h1 {
+  .hero__container .hero__box .title h1 {
     font-size: 50px !important;
   }
-  .hero__ .hero__box .title p {
+  .hero__container .hero__box .title p {
     font-size: 12px !important;
   }
-  .hero__ .hero__box .title .resume__button, .hero__ .hero__box .title .kontak__button {
+  .hero__container .hero__box .title .resume__button, .hero__container .hero__box .title .kontak__button {
     font-size: 10px;
   }
-  .hero__ .hero__box .sabiq__ {
+  .hero__container .hero__box .sabiq__ {
     width: 350px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .hero__ .hero__box {
+  .hero__container .hero__box {
     text-align: center;
     margin: auto;
   }
-  .hero__ .hero__box .title p {
+  .hero__container .hero__box .title p {
     display: none;
   }
-  .hero__ .hero__box .title a {
+  .hero__container .hero__box .title a {
     display: none;
   }
-  .hero__ .hero__box p {
+  .hero__container .hero__box p {
     display: none;
   }
-  .title__down {
+  .hero__container__small {
     display: block;
   }
   .marginTop__sm {

@@ -126,14 +126,14 @@ body {
           transform: translateX(0);
 }
 
-.hero__ {
+.hero__container {
   position: relative;
   z-index: 0;
   background-color: #fff;
   max-width: 1368px;
 }
 
-.hero__ .hero__box {
+.hero__container .hero__box {
   z-index: 2;
   display: -ms-grid;
   display: grid;
@@ -142,26 +142,26 @@ body {
           align-items: center;
 }
 
-.hero__ .hero__box .title p {
+.hero__container .hero__box .title p {
   color: #aaaaaa;
 }
 
-.hero__ .hero__box .title p span {
+.hero__container .hero__box .title p span {
   color: #28B5B5;
   font-weight: 600;
 }
 
-.hero__ .hero__box .title h1 {
+.hero__container .hero__box .title h1 {
   color: #0061A8;
   font-size: 75px;
   font-weight: 600;
 }
 
-.hero__ .hero__box .title h1 span {
+.hero__container .hero__box .title h1 span {
   font-size: 18px;
 }
 
-.hero__ .hero__box .title .resume__button, .hero__ .hero__box .title .kontak__button {
+.hero__container .hero__box .title .resume__button, .hero__container .hero__box .title .kontak__button {
   width: 120px;
   padding: 8px 0;
   font-weight: 400;
@@ -172,39 +172,39 @@ body {
   font-size: 14px;
 }
 
-.hero__ .hero__box .title .kontak__button {
+.hero__container .hero__box .title .kontak__button {
   color: white;
   background-color: #0061A8;
 }
 
-.hero__ .hero__box .title .kontak__button i {
+.hero__container .hero__box .title .kontak__button i {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transform: rotate(-250deg);
           transform: rotate(-250deg);
 }
 
-.hero__ .hero__box .title .resume__button {
+.hero__container .hero__box .title .resume__button {
   color: #0061A8;
   border: 1px solid #0061A8;
 }
 
-.hero__ .hero__box .title .resume__button i {
+.hero__container .hero__box .title .resume__button i {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.hero__ .hero__box .title .resume__button:hover i {
+.hero__container .hero__box .title .resume__button:hover i {
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
 }
 
-.hero__ .hero__box .title .kontak__button:hover i {
+.hero__container .hero__box .title .kontak__button:hover i {
   -webkit-transform: rotate(-270deg);
           transform: rotate(-270deg);
 }
 
-.hero__ .hero__box .sabiq__ {
+.hero__container .hero__box .sabiq__ {
   z-index: 4;
   position: relative;
   width: 500px;
@@ -220,7 +220,7 @@ body {
   opacity: 0;
 }
 
-.title__down {
+.hero__container__small {
   background: white;
   z-index: 3;
   -webkit-box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
@@ -237,11 +237,11 @@ body {
           justify-content: center;
 }
 
-.title__down p {
+.hero__container__small p {
   font-size: 12px;
 }
 
-.title__down div {
+.hero__container__small div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,18 +249,18 @@ body {
       justify-content: space-around;
 }
 
-.title__down div .contact__button__sm, .title__down div .resume__button__sm {
+.hero__container__small div .contact__button__sm, .hero__container__small div .resume__button__sm {
   width: 120px;
   padding: 10px 0;
   font-size: 12px;
 }
 
-.title__down div .resume__button__sm {
+.hero__container__small div .resume__button__sm {
   color: white;
   background: #0061A8;
 }
 
-.title__down div .contact__button__sm {
+.hero__container__small div .contact__button__sm {
   color: #0061A8;
   font-weight: 400;
   border: 1px solid #0061A8;
