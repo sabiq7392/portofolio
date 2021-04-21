@@ -1,0 +1,58 @@
+@media screen and (max-width: 991px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
+  .navbar .logo-kanan {
+    display: block;
+  }
+  .navbar .navbar-nav {
+    border-radius: 10px;
+    z-index: 4;
+    background-color: #fff;
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+  .navbar .navbar-nav .nav-item .nav-line {
+    display: none;
+  }
+  .navbar .others {
+    display: none;
+  }
+  .hero__ .hero__box .title h1 {
+    font-size: 50px !important;
+  }
+  .hero__ .hero__box .title p {
+    font-size: 12px !important;
+  }
+  .hero__ .hero__box .title .resume__button, .hero__ .hero__box .title .kontak__button {
+    font-size: 10px;
+  }
+  .hero__ .hero__box .sabiq__ {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero__ .hero__box {
+    text-align: center;
+    margin: auto;
+  }
+  .hero__ .hero__box .title p {
+    display: none;
+  }
+  .hero__ .hero__box .title a {
+    display: none;
+  }
+  .hero__ .hero__box p {
+    display: none;
+  }
+  .title__down {
+    display: block;
+  }
+  .marginTop__sm {
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=screen.css.map */
