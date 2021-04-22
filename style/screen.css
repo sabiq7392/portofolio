@@ -17,7 +17,7 @@
   .navbar .navbar-nav .nav-item .nav-line {
     display: none;
   }
-  .navbar .others {
+  .navbar .others__nav {
     display: none;
   }
   .hero__container .hero__box .title h1 {
@@ -29,8 +29,8 @@
   .hero__container .hero__box .title .resume__button, .hero__container .hero__box .title .kontak__button {
     font-size: 10px;
   }
-  .hero__container .hero__box .sabiq__ {
-    width: 350px;
+  .hero__container .hero__box #sabiq {
+    width: 300px !important;
   }
 }
 
@@ -49,7 +49,7 @@
     display: none;
   }
   .hero__container__small {
-    display: block;
+    display: block !important;
   }
   .marginTop__sm {
     margin-top: 50px;

@@ -12,9 +12,10 @@ function rotate() {
   hum2.classList.toggle("d-none");
   hum3.classList.toggle("rotated_hum3");
 }
-document.querySelector(".kontak__button").addEventListener("click", kontakFunction)
-function kontakFunction() {
-  
+
+function heroButtonSmall() {
+  let buttonHero = document.querySelector(".kontak__button__sm");
+  buttonHero.classList.toggle("changed");
 }
 
 window.addEventListener('scroll', reveal);
