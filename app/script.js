@@ -1,6 +1,10 @@
-
 $(document).ready(function(){
-
+  // $(".resume__button__sm").focus(function() {
+  //   $(this).addClass("changeBackground");
+  // });
+  // $(".resume__button__sm").blur(function() {
+  //   $(this).removeClass("changeBackground");
+  // });
 });  
 // ======================
 document.querySelector(".navbar-toggler").addEventListener("click", rotate);
@@ -11,11 +15,6 @@ function rotate() {
   hum1.classList.toggle("rotated_hum1");
   hum2.classList.toggle("d-none");
   hum3.classList.toggle("rotated_hum3");
-}
-
-function heroButtonSmall() {
-  let buttonHero = document.querySelector(".kontak__button__sm");
-  buttonHero.classList.toggle("changed");
 }
 
 window.addEventListener('scroll', reveal);

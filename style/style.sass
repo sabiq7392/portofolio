@@ -32,7 +32,6 @@ body
     background-color: #fff
 
 .navbar 
-    z-index: 5
     // box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.10)
     background-color: #fff
     .logo-kanan 
@@ -56,7 +55,6 @@ body
     .navbar-nav 
         .nav-item 
             padding: 0 10px
-
             .nav-link, .nav-line 
                 letter-spacing: 1px
                 transition: 0.6s
@@ -79,7 +77,7 @@ body
                 background-color: $primaryColor
 
 .others__nav
-    .git .nav-link 
+    .other .nav-link 
         color: $primaryColor!important
         transition: 0.4s!important
         i 
@@ -93,7 +91,7 @@ body
             transform: translateX(-20px)
             opacity: 0
               
-    .git:hover .nav-link 
+    .other:hover .nav-link 
         margin-right: 15px //biar tulisan other ga nabrak sama logo lain
         transform: translateX(-25px)
         span 
@@ -116,20 +114,16 @@ body
                 color: $primaryColor 
                 font-size: 75px
                 font-weight: 600
-                span 
-                    font-size: 18px
 
             p
-               
-                margin: $marginNormal 0
-                line-height: 180%
+                margin-top: 10px
+                margin-bottom: 25px 
+                line-height: 160%
                 color: #aaaaaa
                 span 
                     color: $lightColor
                     font-weight: 600
                 
-            
-            
             .resume__button, .kontak__button 
                 width: 150px
                 padding: 12px 0 
@@ -143,22 +137,25 @@ body
                 i 
                     transition: 0.2s
                     transform: rotate(-250deg)
-            
+
+            .kontak__button:hover 
+                filter: brightness(90%)
+                i 
+                    transform: rotate(-270deg)
+
             .resume__button 
                 color: $primaryColor
                 border: 1px solid $primaryColor
                 i 
                     transition: 0.2s
-            
+
             .resume__button:hover 
+                color: white
+                background-color: $primaryColor
                 i 
                     transform: translateY(3px)
             
-            .kontak__button:hover 
-                i 
-                    transform: rotate(-270deg)
     
-
 #sabiq
     z-index: 4
     position: relative
@@ -182,10 +179,12 @@ body
     justify-content: center
     p 
         font-size: 14px
+        line-height: 160%
+        color: #aaaaaa
         span 
             color: $lightColor
             font-weight: 600
-    div
+    .buttonWrapper__sm
         display: flex
         justify-content: space-around
         .contact__button__sm, .resume__button__sm 
@@ -194,15 +193,22 @@ body
             font-size: 12px
             
     .resume__button__sm 
+        color: $primaryColor
+        border: 1px solid $primaryColor
+
+    .resume__button__sm:focus
+        color: white!important
+        background-color: $primaryColor
+    
+    .contact__button__sm 
         color: white
         background: $primaryColor
-            
-    .contact__button__sm 
-        color: $primaryColor
         font-weight: 400
-        border: 1px solid $primaryColor
-        
-        
+
+    .contact__button__sm:focus
+        filter: brightness(90%)!important
+    
+
         
 // SPAWN CLASS
 li 
@@ -227,8 +233,9 @@ a
 .rotated_hum3 
     transform:rotate(-45deg)translateY(-2px)!important
 
-.changed 
-    transform: translateX(70px)!important
+.changeBackground 
+    color: white!important
+    background-color: $primaryColor
 
 @import "screen.sass"
 

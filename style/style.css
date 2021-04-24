@@ -31,7 +31,6 @@ body {
 }
 
 .navbar {
-  z-index: 5;
   background-color: #fff;
 }
 
@@ -90,18 +89,18 @@ body {
   background-color: #0061A8;
 }
 
-.others__nav .git .nav-link {
+.others__nav .other .nav-link {
   color: #0061A8 !important;
   -webkit-transition: 0.4s !important;
   transition: 0.4s !important;
 }
 
-.others__nav .git .nav-link i {
+.others__nav .other .nav-link i {
   color: #0061A8;
   font-size: 18px;
 }
 
-.others__nav .git .nav-link span {
+.others__nav .other .nav-link span {
   font-size: 14px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -111,13 +110,13 @@ body {
   opacity: 0;
 }
 
-.others__nav .git:hover .nav-link {
+.others__nav .other:hover .nav-link {
   margin-right: 15px;
   -webkit-transform: translateX(-25px);
           transform: translateX(-25px);
 }
 
-.others__nav .git:hover .nav-link span {
+.others__nav .other:hover .nav-link span {
   margin-left: 5px;
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -147,13 +146,10 @@ body {
   font-weight: 600;
 }
 
-.hero__container .hero__box .title h1 span {
-  font-size: 18px;
-}
-
 .hero__container .hero__box .title p {
-  margin: 27px 0;
-  line-height: 180%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  line-height: 160%;
   color: #aaaaaa;
 }
 
@@ -185,6 +181,16 @@ body {
           transform: rotate(-250deg);
 }
 
+.hero__container .hero__box .title .kontak__button:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.hero__container .hero__box .title .kontak__button:hover i {
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
+}
+
 .hero__container .hero__box .title .resume__button {
   color: #0061A8;
   border: 1px solid #0061A8;
@@ -195,14 +201,14 @@ body {
   transition: 0.2s;
 }
 
+.hero__container .hero__box .title .resume__button:hover {
+  color: white;
+  background-color: #0061A8;
+}
+
 .hero__container .hero__box .title .resume__button:hover i {
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
-}
-
-.hero__container .hero__box .title .kontak__button:hover i {
-  -webkit-transform: rotate(-270deg);
-          transform: rotate(-270deg);
 }
 
 #sabiq {
@@ -236,6 +242,8 @@ body {
 
 .hero__container__small p {
   font-size: 14px;
+  line-height: 160%;
+  color: #aaaaaa;
 }
 
 .hero__container__small p span {
@@ -243,7 +251,7 @@ body {
   font-weight: 600;
 }
 
-.hero__container__small div {
+.hero__container__small .buttonWrapper__sm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,21 +259,31 @@ body {
       justify-content: space-around;
 }
 
-.hero__container__small div .contact__button__sm, .hero__container__small div .resume__button__sm {
+.hero__container__small .buttonWrapper__sm .contact__button__sm, .hero__container__small .buttonWrapper__sm .resume__button__sm {
   width: 160px;
   padding: 18px 0;
   font-size: 12px;
 }
 
 .hero__container__small .resume__button__sm {
-  color: white;
-  background: #0061A8;
+  color: #0061A8;
+  border: 1px solid #0061A8;
+}
+
+.hero__container__small .resume__button__sm:focus {
+  color: white !important;
+  background-color: #0061A8;
 }
 
 .hero__container__small .contact__button__sm {
-  color: #0061A8;
+  color: white;
+  background: #0061A8;
   font-weight: 400;
-  border: 1px solid #0061A8;
+}
+
+.hero__container__small .contact__button__sm:focus {
+  -webkit-filter: brightness(90%) !important;
+          filter: brightness(90%) !important;
 }
 
 li {
@@ -299,9 +317,9 @@ a {
           transform: rotate(-45deg) translateY(-2px) !important;
 }
 
-.changed {
-  -webkit-transform: translateX(70px) !important;
-          transform: translateX(70px) !important;
+.changeBackground {
+  color: white !important;
+  background-color: #0061A8;
 }
 
 @media screen and (max-width: 991px) {
